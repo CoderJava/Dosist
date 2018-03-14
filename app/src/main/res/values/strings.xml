@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">Dosist</string>
+    <string name="overview">Overview</string>
+    <string name="transaction_detail">Transaction Detail</string>
+    <string name="rp">Rp</string>
+    <string name="_9_382">9.382</string>
+    <string name="idr">IDR</string>
+    <string name="income">Income</string>
+    <string name="image_view_income">image view income</string>
+    <string name="rp_1_492_000_idr">Rp 1.492.000 IDR</string>
+    <string name="expense">Expense</string>
+    <string name="image_view_expense">image view expense</string>
+    <string name="rp_1_146_000_idr">Rp 1.146.000 IDR</string>
+    <string name="image_view_menu_home_active">image view menu home active</string>
+    <string name="image_view_menu_home_inactive">image view menu home inactive</string>
+    <string name="image_view_menu_history_active">image view menu history active</string>
+    <string name="image_view_menu_history_inactive">image view menu history inactive</string>
 </resources>
