@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary"
-    tools:context="com.ysn.dosist.MainActivity">
+    tools:context="com.ysn.dosist.views.ui.home.MainActivity">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar_activity_main"

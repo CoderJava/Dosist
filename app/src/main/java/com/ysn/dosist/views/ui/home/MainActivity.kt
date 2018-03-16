@@ -1,7 +1,8 @@
-package com.ysn.dosist
+package com.ysn.dosist.views.ui.home
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import com.ysn.dosist.R
 
 class MainActivity : AppCompatActivity() {
 

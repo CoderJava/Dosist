@@ -23,6 +23,7 @@ android {
     productFlavors {
         production {
             applicationIdSuffix ""
+            buildConfigField("String", "BASE_URL_ENDPOINT", "\"https://www.google.com/\"")
         }
     }
 }
