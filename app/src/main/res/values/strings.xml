@@ -15,4 +15,6 @@
     <string name="image_view_menu_home_inactive">image view menu home inactive</string>
     <string name="image_view_menu_history_active">image view menu history active</string>
     <string name="image_view_menu_history_inactive">image view menu history inactive</string>
+    <string name="income_format">Rp %s IDR</string>
+    <string name="expense_format">Rp %s IDR</string>
 </resources>
