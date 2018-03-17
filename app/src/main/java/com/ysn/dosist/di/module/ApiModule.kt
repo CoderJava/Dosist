@@ -14,6 +14,6 @@ class ApiModule {
 
     @Provides
     @Singleton
-    fun providesEndpoints(retrofit: Retrofit): Endpoints = retrofit.create(Endpoints::class.java)
+    fun provideEndpoints(retrofit: Retrofit): Endpoints = retrofit.create(Endpoints::class.java)
 
 }
