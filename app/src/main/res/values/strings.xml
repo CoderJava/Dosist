@@ -1,8 +1,8 @@
 <!--
-  ~ Created by YSN Studio on 3/18/18 4:11 PM
+  ~ Created by YSN Studio on 3/18/18 7:23 PM
   ~ Copyright (c) 2018. All rights reserved.
   ~
-  ~ Last modified 3/18/18 9:55 AM
+  ~ Last modified 3/18/18 7:22 PM
   -->
 
 <resources>
@@ -31,4 +31,10 @@
     <string name="amount_format_income">+Rp %s</string>
     <string name="amount_format_expense">-Rp %s</string>
     <string name="image_view_banner_dbs">image view banner dbs</string>
+    <string name="subject">Subject</string>
+    <string name="description">Description</string>
+    <string name="amount">Amount</string>
+    <string name="_0">0</string>
+    <string name="save">Save</string>
+    <string name="image_view_icon_save">image view icon save</string>
 </resources>
