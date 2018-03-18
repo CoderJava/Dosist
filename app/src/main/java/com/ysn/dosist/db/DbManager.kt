@@ -1,3 +1,10 @@
+/*
+ * Created by YSN Studio on 3/18/18 4:11 PM
+ * Copyright (c) 2018. All rights reserved.
+ *
+ * Last modified 3/18/18 11:31 AM
+ */
+
 package com.ysn.dosist.db
 
 import android.app.Application

@@ -1,3 +1,10 @@
+/*
+ * Created by YSN Studio on 3/18/18 4:11 PM
+ * Copyright (c) 2018. All rights reserved.
+ *
+ * Last modified 3/14/18 6:03 AM
+ */
+
 package com.ysn.dosist
 
 import org.junit.Assert.assertEquals

@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Created by YSN Studio on 3/18/18 4:11 PM
+  ~ Copyright (c) 2018. All rights reserved.
+  ~
+  ~ Last modified 3/18/18 11:24 AM
+  -->
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
