@@ -1,8 +1,8 @@
 /*
- * Created by YSN Studio on 3/18/18 4:11 PM
+ * Created by YSN Studio on 3/18/18 10:37 PM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 3/18/18 11:01 AM
+ * Last modified 3/18/18 10:06 PM
  */
 
 package com.ysn.dosist.views.ui.home.adapter
@@ -38,6 +38,7 @@ class AdapterTransactionDetail(private val context: Context, private val dbManag
             holder.itemView.text_view_subject_item_transaction_detail.text = it.subject
 
             val amount = DecimalFormat("#,###").format(it.amount)
+                    .replace(",", ".")
             val formatAmount: String
             when (it.type.toLowerCase()) {
                 "income" -> {
@@ -59,7 +60,7 @@ class AdapterTransactionDetail(private val context: Context, private val dbManag
                 }
             }
 
-            val formatDate = SimpleDateFormat("MMM dd, yyyy", Locale.US).format(DateTime(it.timestamp))
+            val formatDate = SimpleDateFormat("MMM dd, yyyy", Locale.US).format(DateTime(it.timestamp).toDate())
             holder.itemView.text_view_date_item_transaction_detail.text = formatDate
 
             holder.itemView.image_view_item_category_item_transaction_detail
