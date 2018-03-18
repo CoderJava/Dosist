@@ -1,8 +1,8 @@
 /*
- * Created by YSN Studio on 3/18/18 5:12 PM
+ * Created by YSN Studio on 3/18/18 7:27 PM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 3/18/18 5:11 PM
+ * Last modified 3/18/18 6:00 PM
  */
 
 package com.ysn.dosist.views.ui.home
@@ -16,12 +16,14 @@ import com.ysn.dosist.db.entity.BalanceCurrent
 import com.ysn.dosist.di.component.home.DaggerHomeActivityComponent
 import com.ysn.dosist.di.module.home.HomeActivityModule
 import com.ysn.dosist.views.base.BaseActivity
+import com.ysn.dosist.views.ui.addtransaction.AddTransactionActivity
 import com.ysn.dosist.views.ui.home.adapter.AdapterTransactionDetail
 import kotlinx.android.synthetic.main.activity_home.*
+import org.jetbrains.anko.intentFor
 import java.text.DecimalFormat
 import javax.inject.Inject
 
-class HomeActivity : BaseActivity(), HomeView {
+class HomeActivity : BaseActivity(), HomeView, View.OnClickListener {
 
     @Inject
     lateinit var presenter: HomePresenter
@@ -29,13 +31,26 @@ class HomeActivity : BaseActivity(), HomeView {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
+        initListeners()
+    }
 
+    private fun initListeners() {
+        floating_action_button_add_transaction_activity_home.setOnClickListener(this)
     }
 
     override fun onResume() {
         super.onResume()
         presenter.onLoadBalanceCurrent()
         presenter.onLoadTransactionDetail()
+    }
+
+    override fun onClick(view: View) {
+        when (view.id) {
+            R.id.floating_action_button_add_transaction_activity_home -> startActivity(intentFor<AddTransactionActivity>())
+            else -> {
+                /** nothing to do in here */
+            }
+        }
     }
 
     override fun onError() {
