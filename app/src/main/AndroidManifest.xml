@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  ~ Created by YSN Studio on 3/18/18 4:11 PM
+  ~ Created by YSN Studio on 3/18/18 4:52 PM
   ~ Copyright (c) 2018. All rights reserved.
   ~
-  ~ Last modified 3/18/18 4:05 PM
+  ~ Last modified 3/18/18 4:28 PM
   -->
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
@@ -17,14 +17,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".views.ui.home.HomeActivity">
+        <activity android:name=".views.ui.splashscreen.SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".views.ui.splashscreen.SplashScreenActivity"></activity>
+        <activity android:name=".views.ui.home.HomeActivity" />
     </application>
 
 </manifest>
