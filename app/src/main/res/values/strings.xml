@@ -17,4 +17,10 @@
     <string name="image_view_menu_history_inactive">image view menu history inactive</string>
     <string name="income_format">Rp %s IDR</string>
     <string name="expense_format">Rp %s IDR</string>
+    <string name="image_view_icon_category_item_transaction_detail">image view icon category item transaction detail</string>
+    <string name="mar_18_2018">Mar 18, 2018</string>
+    <string name="hp_iphonex_64gb">HP iPhoneX 64GB</string>
+    <string name="rp_8_000_000">-Rp 8.000.000</string>
+    <string name="amount_format_income">+Rp %s</string>
+    <string name="amount_format_expense">-Rp %s</string>
 </resources>
