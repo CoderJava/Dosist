@@ -1,8 +1,8 @@
 /*
- * Created by YSN Studio on 3/18/18 4:11 PM
+ * Created by YSN Studio on 3/18/18 10:34 PM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 3/18/18 11:10 AM
+ * Last modified 3/18/18 10:19 PM
  */
 
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
@@ -54,4 +54,5 @@ ext {
     ankoVersion = "0.10.4"
     jodaTimeVersion = "2.9.8"
     lottieVersion = "2.5.1"
+    eventBusVersion = "3.1.1"
 }

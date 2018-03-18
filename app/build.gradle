@@ -1,8 +1,8 @@
 /*
- * Created by YSN Studio on 3/18/18 4:11 PM
+ * Created by YSN Studio on 3/18/18 10:34 PM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 3/18/18 4:06 PM
+ * Last modified 3/18/18 10:19 PM
  */
 
 apply plugin: 'com.android.application'
@@ -101,5 +101,11 @@ dependencies {
 
     /* Lottie - Render after effects animations natively */
     implementation "com.airbnb.android:lottie:$lottieVersion"
+
+    /**
+     * Event Bus - Android and Java that simplifies communication between Activities,
+     * Fragments, Threads, Services, etc. Less code, better quality
+     */
+    implementation "org.greenrobot:eventbus:$eventBusVersion"
 
 }
