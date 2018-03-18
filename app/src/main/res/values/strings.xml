@@ -1,8 +1,8 @@
 <!--
-  ~ Created by YSN Studio on 3/18/18 7:23 PM
+  ~ Created by YSN Studio on 3/18/18 8:35 PM
   ~ Copyright (c) 2018. All rights reserved.
   ~
-  ~ Last modified 3/18/18 7:22 PM
+  ~ Last modified 3/18/18 8:34 PM
   -->
 
 <resources>
@@ -37,4 +37,6 @@
     <string name="_0">0</string>
     <string name="save">Save</string>
     <string name="image_view_icon_save">image view icon save</string>
+    <string name="category">Category</string>
+    <string name="choose_category">Choose Category</string>
 </resources>
