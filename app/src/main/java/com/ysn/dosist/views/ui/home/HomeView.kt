@@ -1,8 +1,8 @@
 /*
- * Created by YSN Studio on 3/18/18 4:11 PM
+ * Created by YSN Studio on 3/18/18 10:38 PM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 3/18/18 11:06 AM
+ * Last modified 3/18/18 10:29 PM
  */
 
 package com.ysn.dosist.views.ui.home
@@ -22,5 +22,9 @@ interface HomeView : BaseView {
     fun getViewContext(): Context
 
     fun loadTransactionDetail(adapterTransactionDetail: AdapterTransactionDetail)
+
+    fun refreshTransactionDetail()
+
+    fun refreshBalanceCurrent(resultBalanceCurrent: BalanceCurrent)
 
 }

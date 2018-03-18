@@ -1,8 +1,8 @@
 /*
- * Created by YSN Studio on 3/18/18 4:57 PM
+ * Created by YSN Studio on 3/18/18 10:38 PM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 3/18/18 4:56 PM
+ * Last modified 3/18/18 10:29 PM
  */
 
 package com.ysn.dosist.views.ui.home
@@ -38,7 +38,7 @@ class HomePresenter @Inject constructor(private var dbManager: DbManager) : Base
                 dbManager = dbManager,
                 detailTransactions = detailTransactions
         )
-        transactionDetailSubscription = dbManager.queryGetAllTransaction()
+        transactionDetailSubscription = dbManager.queryGetAllTransactionBox()
                 .subscribe()
                 .on(AndroidScheduler.mainThread())
                 .observer { detailTransactions: MutableList<DetailTransaction>? ->
@@ -46,6 +46,23 @@ class HomePresenter @Inject constructor(private var dbManager: DbManager) : Base
                     this.detailTransactions = detailTransactions as ArrayList<DetailTransaction>
                     adapterTransactionDetail.refresh(this.detailTransactions)
                     view?.loadTransactionDetail(adapterTransactionDetail = adapterTransactionDetail)
+                }
+    }
+
+    fun onRefreshBalanceCurrent() {
+        val resultBalanceCurrent = dbManager.queryBalanceCurrentBox()
+        view?.refreshBalanceCurrent(resultBalanceCurrent = resultBalanceCurrent)
+    }
+
+    fun onRefreshTransactionDetail() {
+        val context = view?.getViewContext()
+        transactionDetailSubscription = dbManager.queryGetAllTransactionBox()
+                .subscribe()
+                .on(AndroidScheduler.mainThread())
+                .observer { detailTransactions: MutableList<DetailTransaction> ->
+                    this.detailTransactions.addAll(detailTransactions)
+                    adapterTransactionDetail.refresh(this.detailTransactions)
+                    view?.refreshTransactionDetail()
                 }
     }
 
