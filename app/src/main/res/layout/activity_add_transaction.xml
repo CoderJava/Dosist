@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?><!--
-  ~ Created by YSN Studio on 3/18/18 7:48 PM
+  ~ Created by YSN Studio on 3/18/18 7:57 PM
   ~ Copyright (c) 2018. All rights reserved.
   ~
-  ~ Last modified 3/18/18 7:44 PM
+  ~ Last modified 3/18/18 7:53 PM
   -->
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -135,7 +135,7 @@
             <EditText
                 android:id="@+id/edit_text_description_activity_add_transaction"
                 android:layout_width="match_parent"
-                android:layout_height="96dp"
+                android:layout_height="72dp"
                 android:background="@android:color/transparent"
                 android:gravity="top"
                 android:inputType="textMultiLine"
