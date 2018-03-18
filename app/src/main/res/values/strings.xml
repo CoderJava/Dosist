@@ -30,4 +30,5 @@
     <string name="rp_8_000_000">-Rp 8.000.000</string>
     <string name="amount_format_income">+Rp %s</string>
     <string name="amount_format_expense">-Rp %s</string>
+    <string name="image_view_banner_dbs">image view banner dbs</string>
 </resources>
