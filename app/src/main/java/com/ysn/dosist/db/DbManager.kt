@@ -1,8 +1,8 @@
 /*
- * Created by YSN Studio on 3/18/18 4:11 PM
+ * Created by YSN Studio on 3/18/18 10:36 PM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 3/18/18 11:31 AM
+ * Last modified 3/18/18 10:17 PM
  */
 
 package com.ysn.dosist.db
@@ -24,8 +24,8 @@ import javax.inject.Inject
 class DbManager @Inject constructor(val application: Application) : AnkoLogger {
 
     private var balanceCurrentBox: Box<BalanceCurrent> = (application as App).boxStore.boxFor(BalanceCurrent::class.java)
-    private var categoryTransaction: Box<CategoryTransaction> = (application as App).boxStore.boxFor(CategoryTransaction::class.java)
-    private var detailTransaction: Box<DetailTransaction> = (application as App).boxStore.boxFor(DetailTransaction::class.java)
+    private var categoryTransactionBox: Box<CategoryTransaction> = (application as App).boxStore.boxFor(CategoryTransaction::class.java)
+    private var detailTransactionBox: Box<DetailTransaction> = (application as App).boxStore.boxFor(DetailTransaction::class.java)
 
     /**
      * Put Balance Current Box
@@ -52,32 +52,47 @@ class DbManager @Inject constructor(val application: Application) : AnkoLogger {
      * Put Category Transaction Box
      */
     fun prepareDataCategoryTransactionBox() {
-        if (categoryTransaction.count() != 7L) {
-            categoryTransaction.put(CategoryTransaction(name = "Food Drink"))
-            categoryTransaction.put(CategoryTransaction(name = "Shopping"))
-            categoryTransaction.put(CategoryTransaction(name = "Salary"))
-            categoryTransaction.put(CategoryTransaction(name = "Lifestyle"))
-            categoryTransaction.put(CategoryTransaction(name = "Health"))
-            categoryTransaction.put(CategoryTransaction(name = "Travelling"))
-            categoryTransaction.put(CategoryTransaction(name = "Other"))
+        if (categoryTransactionBox.count() != 7L) {
+            categoryTransactionBox.put(CategoryTransaction(name = "Food Drink"))
+            categoryTransactionBox.put(CategoryTransaction(name = "Shopping"))
+            categoryTransactionBox.put(CategoryTransaction(name = "Salary"))
+            categoryTransactionBox.put(CategoryTransaction(name = "Lifestyle"))
+            categoryTransactionBox.put(CategoryTransaction(name = "Health"))
+            categoryTransactionBox.put(CategoryTransaction(name = "Travelling"))
+            categoryTransactionBox.put(CategoryTransaction(name = "Other"))
         }
     }
 
     /**
-     * Get Category DetailTransaction by ID Category
+     * Get all Category Transaction
+     * @return Result Category Transactions
+     */
+    fun getAllCategoryTransactionBox(): List<CategoryTransaction> = categoryTransactionBox.all
+
+    /**
+     * Get Category Transaction by ID Category
      * @param idCategory - Value ID Category
      * @return Result value Category DetailTransaction
      */
-    fun getCategoryTransactionById(idCategory: Long): CategoryTransaction {
-        return categoryTransaction.get(idCategory)
+    fun getCategoryTransactionByIdBox(idCategory: Long): CategoryTransaction {
+        return categoryTransactionBox.get(idCategory)
     }
 
     /**
-     * Get all DetailTransaction
-     * @return Result list DetailTransaction
+     * Get all Detail Transaction
+     * @return Result list Detail Transaction
      */
-    fun queryGetAllTransaction(): Query<DetailTransaction> {
-        return detailTransaction.query().order(DetailTransaction_.id).build()
+    fun queryGetAllTransactionBox(): Query<DetailTransaction> {
+        return detailTransactionBox.query().order(DetailTransaction_.id).build()
     }
+
+    /**
+     * Put Detail Transaction Box
+     * @param detailTransaction - Value Detail Transaction
+     */
+    fun putDetailTransactionBox(detailTransaction: DetailTransaction) {
+        detailTransactionBox.put(detailTransaction)
+    }
+
 
 }
