@@ -1,8 +1,8 @@
 /*
- * Created by YSN Studio on 3/18/18 4:11 PM
+ * Created by YSN Studio on 3/18/18 4:57 PM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 3/18/18 11:06 AM
+ * Last modified 3/18/18 4:56 PM
  */
 
 package com.ysn.dosist.views.ui.home
@@ -21,7 +21,6 @@ import javax.inject.Inject
  */
 class HomePresenter @Inject constructor(private var dbManager: DbManager) : BasePresenter<HomeView>(), AnkoLogger {
 
-    private val TAG = javaClass.simpleName
     private lateinit var adapterTransactionDetail: AdapterTransactionDetail
     private lateinit var transactionDetailSubscription: DataSubscription
     private lateinit var detailTransactions: ArrayList<DetailTransaction>

@@ -1,8 +1,8 @@
 /*
- * Created by YSN Studio on 3/18/18 4:52 PM
+ * Created by YSN Studio on 3/18/18 4:57 PM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 3/18/18 4:42 PM
+ * Last modified 3/18/18 4:56 PM
  */
 
 package com.ysn.dosist.views.ui.splashscreen
@@ -23,8 +23,6 @@ import java.util.concurrent.TimeUnit
 import javax.inject.Inject
 
 class SplashScreenActivity : BaseActivity(), SplashScreenView {
-
-    private val TAG = javaClass.simpleName
 
     @Inject
     lateinit var presenter: SplashScreenPresenter

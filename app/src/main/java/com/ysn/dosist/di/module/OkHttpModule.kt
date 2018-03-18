@@ -1,8 +1,8 @@
 /*
- * Created by YSN Studio on 3/18/18 4:11 PM
+ * Created by YSN Studio on 3/18/18 4:57 PM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 3/16/18 10:07 PM
+ * Last modified 3/18/18 4:56 PM
  */
 
 package com.ysn.dosist.di.module
@@ -33,8 +33,6 @@ class OkHttpModule {
     }
 
     class CachingControlInterceptor : Interceptor {
-
-        private val TAG = javaClass.simpleName
 
         override fun intercept(chain: Interceptor.Chain): Response {
             val requestBuilder = chain.request().newBuilder()
