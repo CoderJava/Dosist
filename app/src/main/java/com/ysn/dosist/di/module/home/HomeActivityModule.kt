@@ -1,8 +1,8 @@
 /*
- * Created by YSN Studio on 3/18/18 4:11 PM
+ * Created by YSN Studio on 3/18/18 4:50 PM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 3/17/18 8:48 AM
+ * Last modified 3/18/18 4:29 PM
  */
 
 package com.ysn.dosist.di.module.home
@@ -21,6 +21,6 @@ class HomeActivityModule {
 
     @Provides
     @ActivityScope
-    internal fun provideHomePresenter(api: DbManager): HomePresenter = HomePresenter(api)
+    internal fun provideHomePresenter(dbManager: DbManager): HomePresenter = HomePresenter(dbManager = dbManager)
 
 }
