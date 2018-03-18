@@ -1,15 +1,195 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
-  ~ Created by YSN Studio on 3/18/18 5:04 PM
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by YSN Studio on 3/18/18 7:28 PM
   ~ Copyright (c) 2018. All rights reserved.
   ~
-  ~ Last modified 3/18/18 5:04 PM
+  ~ Last modified 3/18/18 7:22 PM
   -->
 
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
     tools:context="com.ysn.dosist.views.ui.addtransaction.AddTransactionActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <include
+        android:id="@+id/toolbar_activity_add_transaction"
+        layout="@layout/toolbar_normal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:id="@+id/image_view_save_activity_add_transaction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:contentDescription="@string/image_view_icon_save"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingEnd="@dimen/activity_horizontal_margin"
+        android:paddingStart="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:src="@drawable/ic_save_white_24dp" />
+
+    <LinearLayout
+        android:id="@+id/linear_layout_container_content_activity_add_transaction"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar_activity_add_transaction"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingEnd="@dimen/activity_horizontal_margin"
+        android:paddingStart="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/background_rounded_stroke_white"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/text_view_income_activity_add_transaction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_rounded_income"
+                android:fontFamily="sans-serif-condensed"
+                android:paddingBottom="5dp"
+                android:paddingEnd="24dp"
+                android:paddingStart="24dp"
+                android:paddingTop="5dp"
+                android:text="@string/income"
+                android:textColor="@color/colorWhiteLight"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/text_view_expense_activity_add_transaction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:paddingBottom="5dp"
+                android:paddingEnd="24dp"
+                android:paddingStart="24dp"
+                android:paddingTop="5dp"
+                android:text="@string/expense"
+                android:textColor="@color/colorWhiteLight"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_layout_container_input_subject_activity_add_transacation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:background="@drawable/background_edit_text"
+            android:orientation="vertical"
+            android:paddingBottom="12dp"
+            android:paddingEnd="@dimen/activity_horizontal_margin"
+            android:paddingStart="@dimen/activity_horizontal_margin"
+            android:paddingTop="8dp"
+            tools:ignore="UselessParent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:text="@string/subject"
+                android:textColor="@color/colorWhiteDarker"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/edit_text_subject_activity_add_transaction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@color/colorWhiteLight"
+                tools:ignore="LabelFor" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_layout_container_input_description_activity_add_transaction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:background="@drawable/background_edit_text"
+            android:orientation="vertical"
+            android:paddingBottom="12dp"
+            android:paddingEnd="@dimen/activity_horizontal_margin"
+            android:paddingStart="@dimen/activity_horizontal_margin"
+            android:paddingTop="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/description"
+                android:textColor="@color/colorWhiteDarker"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/edit_text_description_activity_add_transaction"
+                android:layout_width="match_parent"
+                android:layout_height="96dp"
+                android:background="@android:color/transparent"
+                android:gravity="top"
+                android:inputType="textMultiLine"
+                android:maxLines="3"
+                android:textColor="@color/colorWhiteLight"
+                tools:ignore="LabelFor" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_layout_container_input_amount_activity_add_transaction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:background="@drawable/background_edit_text"
+            android:orientation="vertical"
+            android:paddingBottom="12dp"
+            android:paddingEnd="@dimen/activity_horizontal_margin"
+            android:paddingStart="@dimen/activity_horizontal_margin"
+            android:paddingTop="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/amount"
+                android:textColor="@color/colorWhiteDarker"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rp"
+                    android:textColor="@color/colorWhiteLight" />
+
+                <EditText
+                    android:id="@+id/edit_text_amount_add_transaction_activity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:background="@android:color/transparent"
+                    android:inputType="numberDecimal"
+                    android:text="@string/_0"
+                    android:textColor="@color/colorWhiteLight"
+                    tools:ignore="LabelFor" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
