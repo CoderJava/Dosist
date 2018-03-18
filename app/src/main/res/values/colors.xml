@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  ~ Created by YSN Studio on 3/18/18 4:11 PM
+  ~ Created by YSN Studio on 3/18/18 7:23 PM
   ~ Copyright (c) 2018. All rights reserved.
   ~
-  ~ Last modified 3/18/18 9:09 AM
+  ~ Last modified 3/18/18 5:22 PM
   -->
 
 <resources>
@@ -13,4 +13,5 @@
     <color name="colorWhiteLight">#FEFFFF</color>
     <color name="colorTealLight">#5FD89B</color>
     <color name="colorPinkLight">#F77182</color>
+    <color name="colorWhiteDarker">#BDBCC2</color>
 </resources>
