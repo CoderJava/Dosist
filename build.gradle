@@ -1,8 +1,8 @@
 /*
- * Created by YSN Studio on 3/18/18 10:34 PM
+ * Created by YSN Studio on 3/18/18 10:51 PM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 3/18/18 10:19 PM
+ * Last modified 3/18/18 10:44 PM
  */
 
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
@@ -55,4 +55,5 @@ ext {
     jodaTimeVersion = "2.9.8"
     lottieVersion = "2.5.1"
     eventBusVersion = "3.1.1"
+    rxBindingVersion = "2.1.1"
 }
