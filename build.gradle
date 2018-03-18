@@ -32,7 +32,7 @@ ext {
     espressoVersion = "3.0.1"
     testRunnerVersion = "1.0.1"
     jUnitVersion = "4.12"
-    androidSupportVersion = "26.1.0"
+    androidSupportVersion = "27.1.0"
     constraintLayoutVersion = "1.0.2"
     retrofitVersion = "2.3.0"
     okHttpVersion = "3.4.1"
@@ -45,4 +45,6 @@ ext {
     frescoVersion = "1.3.0"
     stethoVersion = "1.5.0"
     ankoVersion = "0.10.4"
+    jodaTimeVersion = "2.9.8"
+    lottieVersion = "2.5.1"
 }
