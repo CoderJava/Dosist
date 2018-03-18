@@ -15,12 +15,13 @@ import com.ysn.dosist.db.entity.DetailTransaction_
 import com.ysn.dosist.views.base.App
 import io.objectbox.Box
 import io.objectbox.query.Query
+import org.jetbrains.anko.AnkoLogger
 import javax.inject.Inject
 
 /**
  * Created by yudisetiawan on 3/17/18.
  */
-class DbManager @Inject constructor(val application: Application) {
+class DbManager @Inject constructor(val application: Application) : AnkoLogger {
 
     private var balanceCurrentBox: Box<BalanceCurrent> = (application as App).boxStore.boxFor(BalanceCurrent::class.java)
     private var categoryTransaction: Box<CategoryTransaction> = (application as App).boxStore.boxFor(CategoryTransaction::class.java)
@@ -44,6 +45,21 @@ class DbManager @Inject constructor(val application: Application) {
             BalanceCurrent()
         } else {
             balanceCurrentBox.query().build().findFirst()!!
+        }
+    }
+
+    /**
+     * Put Category Transaction Box
+     */
+    fun prepareDataCategoryTransactionBox() {
+        if (categoryTransaction.count() != 7L) {
+            categoryTransaction.put(CategoryTransaction(name = "Food Drink"))
+            categoryTransaction.put(CategoryTransaction(name = "Shopping"))
+            categoryTransaction.put(CategoryTransaction(name = "Salary"))
+            categoryTransaction.put(CategoryTransaction(name = "Lifestyle"))
+            categoryTransaction.put(CategoryTransaction(name = "Health"))
+            categoryTransaction.put(CategoryTransaction(name = "Travelling"))
+            categoryTransaction.put(CategoryTransaction(name = "Other"))
         }
     }
 
