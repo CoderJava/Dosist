@@ -1,11 +1,15 @@
 package com.ysn.dosist.views.ui.home
 
+import android.content.Context
 import android.os.Bundle
+import android.support.v7.widget.LinearLayoutManager
+import android.view.View
 import com.ysn.dosist.R
 import com.ysn.dosist.db.entity.BalanceCurrent
 import com.ysn.dosist.di.component.home.DaggerHomeActivityComponent
 import com.ysn.dosist.di.module.home.HomeActivityModule
 import com.ysn.dosist.views.base.BaseActivity
+import com.ysn.dosist.views.ui.home.adapter.AdapterTransactionDetail
 import kotlinx.android.synthetic.main.activity_home.*
 import java.text.DecimalFormat
 import javax.inject.Inject
@@ -25,7 +29,8 @@ class HomeActivity : BaseActivity(), HomeView {
 
     override fun onResume() {
         super.onResume()
-        presenter.onLoadData()
+        presenter.onLoadBalanceCurrent()
+        presenter.onLoadTransactionDetail()
     }
 
     override fun onError() {
@@ -41,7 +46,7 @@ class HomeActivity : BaseActivity(), HomeView {
         presenter.attachView(this)
     }
 
-    override fun loadData(resultBalanceCurrent: BalanceCurrent) {
+    override fun loadBalanceCurrent(resultBalanceCurrent: BalanceCurrent) {
         text_view_overview_activity_main.text = resultBalanceCurrent.balance.toString()
         val decimalFormat = DecimalFormat("#,###")
         val incomeFormat = decimalFormat.format(resultBalanceCurrent.income)
@@ -50,4 +55,17 @@ class HomeActivity : BaseActivity(), HomeView {
         text_view_expense_activity_main.text = getString(R.string.expense_format, expenseFormat)
     }
 
+    override fun getViewContext(): Context = this
+
+    override fun loadTransactionDetail(adapterTransactionDetail: AdapterTransactionDetail) {
+        recycler_view_transaction_detail_activity_main.layoutManager = LinearLayoutManager(this)
+        recycler_view_transaction_detail_activity_main.adapter = adapterTransactionDetail
+        if (adapterTransactionDetail.itemCount == 0) {
+            progress_bar_activity_home.visibility = View.VISIBLE
+            recycler_view_transaction_detail_activity_main.visibility = View.INVISIBLE
+        } else {
+            progress_bar_activity_home.visibility = View.GONE
+            recycler_view_transaction_detail_activity_main.visibility = View.GONE
+        }
+    }
 }
