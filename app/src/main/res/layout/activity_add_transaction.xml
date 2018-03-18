@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?><!--
-  ~ Created by YSN Studio on 3/18/18 7:57 PM
+  ~ Created by YSN Studio on 3/18/18 8:36 PM
   ~ Copyright (c) 2018. All rights reserved.
   ~
-  ~ Last modified 3/18/18 7:53 PM
+  ~ Last modified 3/18/18 8:34 PM
   -->
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -187,6 +187,36 @@
                     tools:ignore="LabelFor" />
 
             </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_layout_container_category_activity_add_transaction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:background="@drawable/background_edit_text"
+            android:orientation="vertical"
+            android:paddingBottom="12dp"
+            android:paddingEnd="@dimen/activity_horizontal_margin"
+            android:paddingStart="@dimen/activity_horizontal_margin"
+            android:paddingTop="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/category"
+                android:textColor="@color/colorWhiteDarker"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/text_view_category_activity_add_transaction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="@string/choose_category"
+                android:textColor="@color/colorWhiteLight" />
 
         </LinearLayout>
 
