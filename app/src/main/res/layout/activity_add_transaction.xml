@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?><!--
-  ~ Created by YSN Studio on 3/18/18 7:28 PM
+  ~ Created by YSN Studio on 3/18/18 7:48 PM
   ~ Copyright (c) 2018. All rights reserved.
   ~
-  ~ Last modified 3/18/18 7:22 PM
+  ~ Last modified 3/18/18 7:44 PM
   -->
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -46,14 +46,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:background="@drawable/background_rounded_stroke_white"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/text_view_income_activity_add_transaction"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/background_rounded_income"
+                android:background="@drawable/background_rounded_income_active"
                 android:fontFamily="sans-serif-condensed"
                 android:paddingBottom="5dp"
                 android:paddingEnd="24dp"
@@ -67,6 +66,7 @@
                 android:id="@+id/text_view_expense_activity_add_transaction"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/background_rounded_expense_inactive"
                 android:fontFamily="sans-serif-condensed"
                 android:paddingBottom="5dp"
                 android:paddingEnd="24dp"
