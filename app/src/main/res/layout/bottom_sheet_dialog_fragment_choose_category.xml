@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by YSN Studio on 3/20/18 2:22 AM
+  ~ Copyright (c) 2018. All rights reserved.
+  ~
+  ~ Last modified 3/20/18 1:59 AM
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/relative_layout_container_bottom_sheet_dialog_fragment_choose_category"
+    android:background="@color/colorPrimary">
+
+    <include
+        android:id="@+id/toolbar_bottom_sheet_dialog_fragment_choose_category"
+        layout="@layout/toolbar_normal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar_bottom_sheet_dialog_fragment_choose_category"
+        android:paddingBottom="8dp"
+        android:paddingEnd="@dimen/activity_horizontal_margin"
+        android:paddingStart="@dimen/activity_horizontal_margin"
+        android:paddingTop="8dp">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view_category_transaction_bottom_sheet_dialog_fragment_choose_category"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
