@@ -1,8 +1,8 @@
 <!--
-  ~ Created by YSN Studio on 3/18/18 10:33 PM
+  ~ Created by YSN Studio on 3/20/18 2:15 AM
   ~ Copyright (c) 2018. All rights reserved.
   ~
-  ~ Last modified 3/18/18 9:58 PM
+  ~ Last modified 3/20/18 12:59 AM
   -->
 
 <resources>
@@ -44,4 +44,5 @@
     <string name="amount_is_required">Invalid Amount</string>
     <string name="category_is_required">Please, choose category</string>
     <string name="success_save_transaction">Transaction has been saved</string>
+    <string name="category_name">Category name</string>
 </resources>
