@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by YSN Studio on 3/20/18 2:15 AM
+  ~ Copyright (c) 2018. All rights reserved.
+  ~
+  ~ Last modified 3/20/18 1:51 AM
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relative_layout_container_item_choose_category_transaction"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimary"
+    android:paddingBottom="8dp"
+    android:paddingTop="8dp">
+
+    <RelativeLayout
+        android:id="@+id/relative_layout_container_circle_icon_item_choose_category_transaction"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:background="@drawable/background_circle_accent">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:id="@+id/image_view_item_choose_category_transaction"
+            android:layout_centerInParent="true"
+            android:contentDescription="@string/image_view_icon_category_item_transaction_detail"
+            android:src="@drawable/ic_attach_money_white_24dp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/text_view_name_item_choose_category_transaction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/relative_layout_container_circle_icon_item_choose_category_transaction"
+        android:text="@string/category_name"
+        android:textColor="@color/colorWhiteLight"
+        android:textSize="16sp" />
+
+</RelativeLayout>
