@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?><!--
-  ~ Created by YSN Studio on 3/18/18 8:36 PM
+  ~ Created by YSN Studio on 3/20/18 12:24 AM
   ~ Copyright (c) 2018. All rights reserved.
   ~
-  ~ Last modified 3/18/18 8:34 PM
+  ~ Last modified 3/20/18 12:21 AM
   -->
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -60,6 +60,7 @@
                 android:paddingTop="5dp"
                 android:text="@string/income"
                 android:textColor="@color/colorWhiteLight"
+                android:tag="selected"
                 android:textSize="16sp" />
 
             <TextView
@@ -74,6 +75,7 @@
                 android:paddingTop="5dp"
                 android:text="@string/expense"
                 android:textColor="@color/colorWhiteLight"
+                android:tag="unselected"
                 android:textSize="16sp" />
 
         </LinearLayout>
