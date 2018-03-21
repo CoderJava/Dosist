@@ -1,8 +1,8 @@
 /*
- * Created by YSN Studio on 3/18/18 10:51 PM
+ * Created by YSN Studio on 3/22/18 2:02 AM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 3/18/18 10:44 PM
+ * Last modified 3/22/18 2:01 AM
  */
 
 apply plugin: 'com.android.application'
@@ -48,6 +48,7 @@ dependencies {
     implementation "com.android.support:appcompat-v7:$androidSupportVersion"
     implementation "com.android.support.constraint:constraint-layout:$constraintLayoutVersion"
     implementation "com.android.support:design:$androidSupportVersion"
+    implementation "com.android.support:support-v4:$androidSupportVersion"
 
     /* Testing framework */
     testImplementation 'junit:junit:4.12'
