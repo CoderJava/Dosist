@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?><!--
-  ~ Created by YSN Studio on 3/22/18 1:42 AM
+  ~ Created by YSN Studio on 3/22/18 2:45 AM
   ~ Copyright (c) 2018. All rights reserved.
   ~
-  ~ Last modified 3/22/18 1:41 AM
+  ~ Last modified 3/22/18 2:40 AM
   -->
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -14,16 +14,16 @@
     tools:context=".views.ui.activities.dashboard.DashboardActivity">
 
     <include
-        android:id="@+id/toolbar_activity_home"
+        android:id="@+id/toolbar_activity_home_bak"
         layout="@layout/toolbar_normal" />
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/toolbar_activity_home">
+        android:layout_below="@+id/toolbar_activity_home_bak">
 
         <TextView
-            android:id="@+id/text_view_label_overview_activity_home"
+            android:id="@+id/text_view_label_overview_activity_home_bak"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
@@ -40,10 +40,10 @@
             android:textSize="16sp" />
 
         <LinearLayout
-            android:id="@+id/linear_layout_container_overview_activity_home"
+            android:id="@+id/linear_layout_container_overview_activity_home_bak"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/text_view_label_overview_activity_home"
+            android:layout_below="@+id/text_view_label_overview_activity_home_bak"
             android:layout_marginBottom="32dp"
             android:orientation="horizontal">
 
@@ -57,7 +57,7 @@
                 android:textColor="@color/colorWhiteLight" />
 
             <TextView
-                android:id="@+id/text_view_overview_activity_home"
+                android:id="@+id/text_view_overview_activity_home_bak"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
@@ -81,10 +81,10 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/linear_layout_container_income_expense_activity_home"
+            android:id="@+id/linear_layout_container_income_expense_activity_home_bak"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/linear_layout_container_overview_activity_home"
+            android:layout_below="@+id/linear_layout_container_overview_activity_home_bak"
             android:layout_marginBottom="32dp"
             android:baselineAligned="false"
             android:orientation="horizontal">
@@ -97,7 +97,7 @@
                 android:paddingStart="@dimen/activity_horizontal_margin">
 
                 <TextView
-                    android:id="@+id/text_view_label_income_temp_activity_home"
+                    android:id="@+id/text_view_label_income_temp_activity_home_bak"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
@@ -105,7 +105,7 @@
                     android:visibility="invisible" />
 
                 <ImageView
-                    android:id="@+id/image_view_income_activity_home"
+                    android:id="@+id/image_view_income_activity_home_bak"
                     android:layout_width="32dp"
                     android:layout_height="38dp"
                     android:layout_centerVertical="true"
@@ -115,20 +115,20 @@
                     android:src="@drawable/ic_arrow_income_24dp" />
 
                 <TextView
-                    android:id="@+id/text_view_label_income_activity_home"
+                    android:id="@+id/text_view_label_income_activity_home_bak"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_toEndOf="@+id/image_view_income_activity_home"
+                    android:layout_toEndOf="@+id/image_view_income_activity_home_bak"
                     android:text="@string/income"
                     android:textColor="@color/colorWhiteLight" />
 
                 <TextView
-                    android:id="@+id/text_view_income_activity_home"
+                    android:id="@+id/text_view_income_activity_home_bak"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/text_view_label_income_temp_activity_home"
+                    android:layout_below="@+id/text_view_label_income_temp_activity_home_bak"
                     android:layout_centerHorizontal="true"
-                    android:layout_toEndOf="@+id/image_view_income_activity_home"
+                    android:layout_toEndOf="@+id/image_view_income_activity_home_bak"
                     android:text="@string/rp_1_492_000_idr"
                     android:textColor="@color/colorWhiteLight" />
 
@@ -142,7 +142,7 @@
                 android:paddingStart="0dp">
 
                 <TextView
-                    android:id="@+id/text_view_label_expense_temp_activity_home"
+                    android:id="@+id/text_view_label_expense_temp_activity_home_bak"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
@@ -150,7 +150,7 @@
                     android:visibility="invisible" />
 
                 <ImageView
-                    android:id="@+id/image_view_expense_activity_home"
+                    android:id="@+id/image_view_expense_activity_home_bak"
                     android:layout_width="32dp"
                     android:layout_height="38dp"
                     android:layout_centerVertical="true"
@@ -161,19 +161,19 @@
                     android:src="@drawable/ic_arrow_expense_24dp" />
 
                 <TextView
-                    android:id="@+id/text_view_label_expense_activity_home"
+                    android:id="@+id/text_view_label_expense_activity_home_bak"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_toEndOf="@+id/image_view_expense_activity_home"
+                    android:layout_toEndOf="@+id/image_view_expense_activity_home_bak"
                     android:text="@string/expense"
                     android:textColor="@color/colorWhiteLight" />
 
                 <TextView
-                    android:id="@+id/text_view_expense_activity_home"
+                    android:id="@+id/text_view_expense_activity_home_bak"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/text_view_label_expense_temp_activity_home"
-                    android:layout_toEndOf="@+id/image_view_expense_activity_home"
+                    android:layout_below="@+id/text_view_label_expense_temp_activity_home_bak"
+                    android:layout_toEndOf="@+id/image_view_expense_activity_home_bak"
                     android:text="@string/rp_1_146_000_idr"
                     android:textColor="@color/colorWhiteLight" />
 
@@ -182,29 +182,29 @@
         </LinearLayout>
 
         <RelativeLayout
-            android:id="@+id/relative_layout_container_transaction_detail_activity_home"
+            android:id="@+id/relative_layout_container_transaction_detail_activity_home_bak"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@+id/linear_layout_container_income_expense_activity_home"
+            android:layout_below="@+id/linear_layout_container_income_expense_activity_home_bak"
             android:layout_marginBottom="@dimen/activity_vertical_margin"
             android:layout_marginEnd="@dimen/activity_horizontal_margin"
             android:layout_marginStart="@dimen/activity_horizontal_margin">
 
             <TextView
-                android:id="@+id/text_view_label_transaction_detail_activity_home"
+                android:id="@+id/text_view_label_transaction_detail_activity_home_bak"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/transaction_detail"
                 android:textColor="@color/colorWhiteLight" />
 
             <android.support.v7.widget.RecyclerView
-                android:id="@+id/recycler_view_transaction_detail_activity_home"
+                android:id="@+id/recycler_view_transaction_detail_activity_home_bak"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_below="@+id/text_view_label_transaction_detail_activity_home" />
+                android:layout_below="@+id/text_view_label_transaction_detail_activity_home_bak" />
 
             <ProgressBar
-                android:id="@+id/progress_bar_activity_home"
+                android:id="@+id/progress_bar_activity_home_bak"
                 style="?android:attr/progressBarStyleHorizontal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -212,7 +212,7 @@
                 android:indeterminate="true" />
 
             <com.airbnb.lottie.LottieAnimationView
-                android:id="@+id/lottine_animatin_view_empty_box_activity_home"
+                android:id="@+id/lottine_animatin_view_empty_box_activity_home_bak"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
@@ -223,7 +223,7 @@
         </RelativeLayout>
 
         <LinearLayout
-            android:id="@+id/linear_layout_container_bottom_menu_bar_activity_home"
+            android:id="@+id/linear_layout_container_bottom_menu_bar_activity_home_bak"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
@@ -237,7 +237,7 @@
                 android:layout_weight="1">
 
                 <View
-                    android:id="@+id/view_divider_menu_home_active_activity_home"
+                    android:id="@+id/view_divider_menu_home_active_activity_home_bak"
                     android:layout_width="24dp"
                     android:layout_height="3dp"
                     android:layout_alignParentBottom="true"
@@ -245,10 +245,10 @@
                     android:background="@drawable/tab_menu_active" />
 
                 <ImageView
-                    android:id="@+id/image_view_home_active_activity_home"
+                    android:id="@+id/image_view_home_active_activity_home_bak"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_above="@+id/view_divider_menu_home_active_activity_home"
+                    android:layout_above="@+id/view_divider_menu_home_active_activity_home_bak"
                     android:layout_centerHorizontal="true"
                     android:layout_marginBottom="8dp"
                     android:contentDescription="@string/image_view_menu_home_active"
@@ -256,10 +256,10 @@
                     android:visibility="visible" />
 
                 <ImageView
-                    android:id="@+id/image_view_home_inactive_activity_home"
+                    android:id="@+id/image_view_home_inactive_activity_home_bak"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_above="@+id/view_divider_menu_home_active_activity_home"
+                    android:layout_above="@+id/view_divider_menu_home_active_activity_home_bak"
                     android:layout_centerHorizontal="true"
                     android:layout_marginBottom="8dp"
                     android:contentDescription="@string/image_view_menu_home_inactive"
@@ -274,7 +274,7 @@
                 android:layout_weight="1">
 
                 <View
-                    android:id="@+id/view_divider_menu_history_active_activity_home"
+                    android:id="@+id/view_divider_menu_history_active_activity_home_bak"
                     android:layout_width="24dp"
                     android:layout_height="3dp"
                     android:layout_alignParentBottom="true"
@@ -283,10 +283,10 @@
                     android:visibility="invisible" />
 
                 <ImageView
-                    android:id="@+id/image_view_history_active_activity_home"
+                    android:id="@+id/image_view_history_active_activity_home_bak"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_above="@+id/view_divider_menu_history_active_activity_home"
+                    android:layout_above="@+id/view_divider_menu_history_active_activity_home_bak"
                     android:layout_centerHorizontal="true"
                     android:layout_marginBottom="8dp"
                     android:contentDescription="@string/image_view_menu_history_active"
@@ -294,10 +294,10 @@
                     android:visibility="gone" />
 
                 <ImageView
-                    android:id="@+id/image_view_history_inactive_activity_home"
+                    android:id="@+id/image_view_history_inactive_activity_home_bak"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_above="@+id/view_divider_menu_history_active_activity_home"
+                    android:layout_above="@+id/view_divider_menu_history_active_activity_home_bak"
                     android:layout_centerHorizontal="true"
                     android:layout_marginBottom="8dp"
                     android:contentDescription="@string/image_view_menu_history_inactive"
@@ -309,7 +309,7 @@
         </LinearLayout>
 
         <android.support.design.widget.FloatingActionButton
-            android:id="@+id/floating_action_button_add_transaction_activity_home"
+            android:id="@+id/floating_action_button_add_transaction_activity_home_bak"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
