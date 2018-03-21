@@ -1,8 +1,8 @@
 /*
- * Created by YSN Studio on 3/22/18 3:11 AM
+ * Created by YSN Studio on 3/22/18 3:12 AM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 3/22/18 3:04 AM
+ * Last modified 3/22/18 3:11 AM
  */
 
 package com.ysn.dosist.views.ui.fragments.home
@@ -84,7 +84,7 @@ class HomeFragment : BaseFragment(), HomeView {
         EventBus.getDefault().register(this)
     }
 
-    fun unregisterEventBus() {
+    private fun unregisterEventBus() {
         EventBus.getDefault().unregister(this)
     }
 
