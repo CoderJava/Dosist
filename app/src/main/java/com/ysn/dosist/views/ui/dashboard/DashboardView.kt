@@ -1,21 +1,21 @@
 /*
- * Created by YSN Studio on 3/18/18 10:38 PM
+ * Created by YSN Studio on 3/22/18 1:38 AM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 3/18/18 10:29 PM
+ * Last modified 3/22/18 1:32 AM
  */
 
-package com.ysn.dosist.views.ui.home
+package com.ysn.dosist.views.ui.dashboard
 
 import android.content.Context
 import com.ysn.dosist.db.entity.BalanceCurrent
 import com.ysn.dosist.views.base.mvp.BaseView
-import com.ysn.dosist.views.ui.home.adapter.AdapterTransactionDetail
+import com.ysn.dosist.views.ui.dashboard.adapter.AdapterTransactionDetail
 
 /**
  * Created by yudisetiawan on 3/16/18.
  */
-interface HomeView : BaseView {
+interface DashboardView : BaseView {
 
     fun loadBalanceCurrent(resultBalanceCurrent: BalanceCurrent)
 

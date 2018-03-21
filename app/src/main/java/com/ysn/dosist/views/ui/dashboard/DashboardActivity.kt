@@ -1,11 +1,11 @@
 /*
- * Created by YSN Studio on 3/18/18 10:38 PM
+ * Created by YSN Studio on 3/22/18 1:38 AM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 3/18/18 10:33 PM
+ * Last modified 3/22/18 1:35 AM
  */
 
-package com.ysn.dosist.views.ui.home
+package com.ysn.dosist.views.ui.dashboard
 
 import android.content.Context
 import android.os.Bundle
@@ -13,12 +13,12 @@ import android.support.v7.widget.LinearLayoutManager
 import android.view.View
 import com.ysn.dosist.R
 import com.ysn.dosist.db.entity.BalanceCurrent
-import com.ysn.dosist.di.component.home.DaggerHomeActivityComponent
-import com.ysn.dosist.di.module.home.HomeActivityModule
+import com.ysn.dosist.di.component.dashboard.DaggerDashboardActivityComponent
+import com.ysn.dosist.di.module.dashboard.DashboardActivityModule
 import com.ysn.dosist.views.base.BaseActivity
 import com.ysn.dosist.views.ui.addtransaction.AddTransactionActivity
-import com.ysn.dosist.views.ui.home.adapter.AdapterTransactionDetail
-import kotlinx.android.synthetic.main.activity_home.*
+import com.ysn.dosist.views.ui.dashboard.adapter.AdapterTransactionDetail
+import kotlinx.android.synthetic.main.activity_home_bak.*
 import org.greenrobot.eventbus.EventBus
 import org.greenrobot.eventbus.Subscribe
 import org.jetbrains.anko.AnkoLogger
@@ -26,14 +26,14 @@ import org.jetbrains.anko.intentFor
 import java.text.DecimalFormat
 import javax.inject.Inject
 
-class HomeActivity : BaseActivity(), HomeView, View.OnClickListener, AnkoLogger {
+class DashboardActivity : BaseActivity(), DashboardView, View.OnClickListener, AnkoLogger {
 
     @Inject
-    lateinit var presenter: HomePresenter
+    lateinit var presenter: DashboardPresenter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_home)
+        setContentView(R.layout.activity_home_bak)
         initListeners()
         registerEventBus()
     }
@@ -75,9 +75,9 @@ class HomeActivity : BaseActivity(), HomeView, View.OnClickListener, AnkoLogger 
     }
 
     override fun onActivityInject() {
-        DaggerHomeActivityComponent.builder()
+        DaggerDashboardActivityComponent.builder()
                 .appComponent(getAppComponent())
-                .homeActivityModule(HomeActivityModule())
+                .dashboardActivityModule(DashboardActivityModule())
                 .build()
                 .inject(this)
         presenter.attachView(this)
@@ -133,4 +133,5 @@ class HomeActivity : BaseActivity(), HomeView, View.OnClickListener, AnkoLogger 
             }
         }
     }
+
 }

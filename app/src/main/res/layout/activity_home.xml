@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?><!--
-  ~ Created by YSN Studio on 3/18/18 10:35 PM
+  ~ Created by YSN Studio on 3/22/18 1:38 AM
   ~ Copyright (c) 2018. All rights reserved.
   ~
-  ~ Last modified 3/18/18 10:03 PM
+  ~ Last modified 3/22/18 1:32 AM
   -->
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -11,7 +11,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary"
-    tools:context="com.ysn.dosist.views.ui.home.HomeActivity">
+    tools:context="com.ysn.dosist.views.ui.dashboard.DashboardActivity">
 
     <include
         android:id="@+id/toolbar_activity_home"
@@ -22,211 +22,18 @@
         android:layout_height="match_parent"
         android:layout_below="@+id/toolbar_activity_home">
 
-        <TextView
-            android:id="@+id/text_view_label_overview_activity_home"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="32dp"
-            android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:background="@drawable/background_rounded_overview"
-            android:fontFamily="sans-serif-condensed"
-            android:paddingBottom="5dp"
-            android:paddingLeft="32dp"
-            android:paddingRight="32dp"
-            android:paddingTop="5dp"
-            android:text="@string/overview"
-            android:textColor="@color/colorWhiteLight"
-            android:textSize="16sp" />
-
-        <LinearLayout
-            android:id="@+id/linear_layout_container_overview_activity_home"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/text_view_label_overview_activity_home"
-            android:layout_marginBottom="32dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="top"
-                android:layout_weight="1"
-                android:gravity="end"
-                android:text="@string/rp"
-                android:textColor="@color/colorWhiteLight" />
-
-            <TextView
-                android:id="@+id/text_view_overview_activity_home"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_marginEnd="8dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginStart="8dp"
-                android:text="@string/_9_382"
-                android:textColor="@color/colorWhiteLight"
-                android:textSize="32sp" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_weight="1"
-                android:text="@string/idr"
-                android:textColor="@color/colorWhiteLight"
-                android:textStyle="bold" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/linear_layout_container_income_expense_activity_home"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/linear_layout_container_overview_activity_home"
-            android:layout_marginBottom="32dp"
-            android:baselineAligned="false"
-            android:orientation="horizontal">
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:paddingEnd="0dp"
-                android:paddingStart="@dimen/activity_horizontal_margin">
-
-                <TextView
-                    android:id="@+id/text_view_label_income_temp_activity_home"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:text="@string/income"
-                    android:visibility="invisible" />
-
-                <ImageView
-                    android:id="@+id/image_view_income_activity_home"
-                    android:layout_width="32dp"
-                    android:layout_height="38dp"
-                    android:layout_centerVertical="true"
-                    android:layout_marginEnd="5dp"
-                    android:contentDescription="@string/image_view_income"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/ic_arrow_income_24dp" />
-
-                <TextView
-                    android:id="@+id/text_view_label_income_activity_home"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_toEndOf="@+id/image_view_income_activity_home"
-                    android:text="@string/income"
-                    android:textColor="@color/colorWhiteLight" />
-
-                <TextView
-                    android:id="@+id/text_view_income_activity_home"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/text_view_label_income_temp_activity_home"
-                    android:layout_centerHorizontal="true"
-                    android:layout_toEndOf="@+id/image_view_income_activity_home"
-                    android:text="@string/rp_1_492_000_idr"
-                    android:textColor="@color/colorWhiteLight" />
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:paddingEnd="@dimen/activity_horizontal_margin"
-                android:paddingStart="0dp">
-
-                <TextView
-                    android:id="@+id/text_view_label_expense_temp_activity_home"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:text="@string/expense"
-                    android:visibility="invisible" />
-
-                <ImageView
-                    android:id="@+id/image_view_expense_activity_home"
-                    android:layout_width="32dp"
-                    android:layout_height="38dp"
-                    android:layout_centerVertical="true"
-                    android:layout_marginEnd="5dp"
-                    android:layout_marginStart="@dimen/activity_horizontal_margin"
-                    android:contentDescription="@string/image_view_expense"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/ic_arrow_expense_24dp" />
-
-                <TextView
-                    android:id="@+id/text_view_label_expense_activity_home"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_toEndOf="@+id/image_view_expense_activity_home"
-                    android:text="@string/expense"
-                    android:textColor="@color/colorWhiteLight" />
-
-                <TextView
-                    android:id="@+id/text_view_expense_activity_home"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/text_view_label_expense_temp_activity_home"
-                    android:layout_toEndOf="@+id/image_view_expense_activity_home"
-                    android:text="@string/rp_1_146_000_idr"
-                    android:textColor="@color/colorWhiteLight" />
-
-            </RelativeLayout>
-
-        </LinearLayout>
-
-        <RelativeLayout
-            android:id="@+id/relative_layout_container_transaction_detail_activity_home"
+        <android.support.v4.view.ViewPager
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@+id/linear_layout_container_income_expense_activity_home"
-            android:layout_marginBottom="@dimen/activity_vertical_margin"
-            android:layout_marginEnd="@dimen/activity_horizontal_margin"
-            android:layout_marginStart="@dimen/activity_horizontal_margin">
-
-            <TextView
-                android:id="@+id/text_view_label_transaction_detail_activity_home"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/transaction_detail"
-                android:textColor="@color/colorWhiteLight" />
-
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/recycler_view_transaction_detail_activity_home"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_below="@+id/text_view_label_transaction_detail_activity_home" />
-
-            <ProgressBar
-                android:id="@+id/progress_bar_activity_home"
-                style="?android:attr/progressBarStyleHorizontal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:indeterminate="true" />
-
-            <com.airbnb.lottie.LottieAnimationView
-                android:id="@+id/lottine_animatin_view_empty_box_activity_home"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                app:lottie_autoPlay="true"
-                app:lottie_loop="true"
-                app:lottie_rawRes="@raw/empty_box" />
-
-        </RelativeLayout>
+            android:id="@+id/view_pager_activity_home"
+            android:layout_above="@+id/linear_layout_container_bottom_menu_bar_activity_home" />
 
         <LinearLayout
             android:id="@+id/linear_layout_container_bottom_menu_bar_activity_home"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
+            android:background="@color/colorPrimary"
             android:baselineAligned="false"
             android:orientation="horizontal">
 

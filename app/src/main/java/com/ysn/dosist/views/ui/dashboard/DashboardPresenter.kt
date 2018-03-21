@@ -1,16 +1,16 @@
 /*
- * Created by YSN Studio on 3/18/18 10:38 PM
+ * Created by YSN Studio on 3/22/18 1:38 AM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 3/18/18 10:29 PM
+ * Last modified 3/22/18 1:32 AM
  */
 
-package com.ysn.dosist.views.ui.home
+package com.ysn.dosist.views.ui.dashboard
 
 import com.ysn.dosist.db.DbManager
 import com.ysn.dosist.db.entity.DetailTransaction
 import com.ysn.dosist.views.base.mvp.BasePresenter
-import com.ysn.dosist.views.ui.home.adapter.AdapterTransactionDetail
+import com.ysn.dosist.views.ui.dashboard.adapter.AdapterTransactionDetail
 import io.objectbox.android.AndroidScheduler
 import io.objectbox.reactive.DataSubscription
 import org.jetbrains.anko.AnkoLogger
@@ -19,7 +19,7 @@ import javax.inject.Inject
 /**
  * Created by yudisetiawan on 3/16/18.
  */
-class HomePresenter @Inject constructor(private var dbManager: DbManager) : BasePresenter<HomeView>(), AnkoLogger {
+class DashboardPresenter @Inject constructor(private var dbManager: DbManager) : BasePresenter<DashboardView>(), AnkoLogger {
 
     private lateinit var adapterTransactionDetail: AdapterTransactionDetail
     private lateinit var transactionDetailSubscription: DataSubscription
