@@ -1,8 +1,8 @@
 /*
- * Created by YSN Studio on 3/22/18 1:42 AM
+ * Created by YSN Studio on 3/22/18 2:04 AM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 3/22/18 1:41 AM
+ * Last modified 3/22/18 1:51 AM
  */
 
 package com.ysn.dosist.di.module.dashboard
@@ -21,6 +21,6 @@ class DashboardActivityModule {
 
     @Provides
     @ActivityScope
-    internal fun provideHomePresenter(dbManager: DbManager): DashboardPresenter = DashboardPresenter(dbManager = dbManager)
+    internal fun provideDashboardPresenter(dbManager: DbManager): DashboardPresenter = DashboardPresenter(dbManager = dbManager)
 
 }
