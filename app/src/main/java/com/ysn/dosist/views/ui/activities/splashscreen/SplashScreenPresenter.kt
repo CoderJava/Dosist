@@ -1,11 +1,11 @@
 /*
- * Created by YSN Studio on 3/18/18 4:52 PM
+ * Created by YSN Studio on 3/22/18 1:42 AM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 3/18/18 4:47 PM
+ * Last modified 3/22/18 1:41 AM
  */
 
-package com.ysn.dosist.views.ui.splashscreen
+package com.ysn.dosist.views.ui.activities.splashscreen
 
 import com.ysn.dosist.db.DbManager
 import com.ysn.dosist.views.base.mvp.BasePresenter

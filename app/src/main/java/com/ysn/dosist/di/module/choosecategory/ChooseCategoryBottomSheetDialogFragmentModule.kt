@@ -1,15 +1,15 @@
 /*
- * Created by YSN Studio on 3/20/18 2:22 AM
+ * Created by YSN Studio on 3/22/18 1:42 AM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 3/20/18 12:47 AM
+ * Last modified 3/22/18 1:41 AM
  */
 
 package com.ysn.dosist.di.module.choosecategory
 
 import com.ysn.dosist.db.DbManager
 import com.ysn.dosist.di.FragmentScope
-import com.ysn.dosist.views.ui.choosecategory.ChooseCategoryPresenter
+import com.ysn.dosist.views.ui.fragments.choosecategory.ChooseCategoryPresenter
 import dagger.Module
 import dagger.Provides
 

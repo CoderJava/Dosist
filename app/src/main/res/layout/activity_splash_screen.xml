@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?><!--
-  ~ Created by YSN Studio on 3/18/18 4:51 PM
+  ~ Created by YSN Studio on 3/22/18 1:42 AM
   ~ Copyright (c) 2018. All rights reserved.
   ~
-  ~ Last modified 3/18/18 4:27 PM
+  ~ Last modified 3/22/18 1:41 AM
   -->
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -14,7 +14,7 @@
     android:paddingEnd="@dimen/activity_horizontal_margin"
     android:paddingStart="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.ysn.dosist.views.ui.splashscreen.SplashScreenActivity">
+    tools:context=".views.ui.activities.splashscreen.SplashScreenActivity">
 
     <TextView
         android:id="@+id/text_view_app_name_activity_splash_screen"

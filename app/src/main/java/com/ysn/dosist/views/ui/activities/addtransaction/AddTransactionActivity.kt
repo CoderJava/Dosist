@@ -1,11 +1,11 @@
 /*
- * Created by YSN Studio on 3/20/18 2:23 AM
+ * Created by YSN Studio on 3/22/18 1:42 AM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 3/20/18 2:11 AM
+ * Last modified 3/22/18 1:41 AM
  */
 
-package com.ysn.dosist.views.ui.addtransaction
+package com.ysn.dosist.views.ui.activities.addtransaction
 
 import android.content.Context
 import android.os.Bundle
@@ -18,7 +18,7 @@ import com.ysn.dosist.db.entity.DetailTransaction
 import com.ysn.dosist.di.component.addtransaction.DaggerAddTransactionActivityComponent
 import com.ysn.dosist.di.module.addtransaction.AddTransactionActivityModule
 import com.ysn.dosist.views.base.BaseActivity
-import com.ysn.dosist.views.ui.choosecategory.ChooseCategoryBottomSheetDialogFragment
+import com.ysn.dosist.views.ui.fragments.choosecategory.ChooseCategoryBottomSheetDialogFragment
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.activity_add_transaction.*

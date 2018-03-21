@@ -1,18 +1,18 @@
 /*
- * Created by YSN Studio on 3/22/18 1:38 AM
+ * Created by YSN Studio on 3/22/18 1:42 AM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 3/22/18 1:32 AM
+ * Last modified 3/22/18 1:41 AM
  */
 
-package com.ysn.dosist.views.ui.splashscreen
+package com.ysn.dosist.views.ui.activities.splashscreen
 
 import android.os.Bundle
 import com.ysn.dosist.R
 import com.ysn.dosist.di.component.splashscreen.DaggerSplashScreenActivityComponent
 import com.ysn.dosist.di.module.splashscreen.SplashScreenActivityModule
 import com.ysn.dosist.views.base.BaseActivity
-import com.ysn.dosist.views.ui.dashboard.DashboardActivity
+import com.ysn.dosist.views.ui.activities.dashboard.DashboardActivity
 import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers

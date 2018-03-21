@@ -1,16 +1,16 @@
 /*
- * Created by YSN Studio on 3/20/18 2:22 AM
+ * Created by YSN Studio on 3/22/18 1:42 AM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 3/20/18 1:20 AM
+ * Last modified 3/22/18 1:41 AM
  */
 
-package com.ysn.dosist.views.ui.choosecategory
+package com.ysn.dosist.views.ui.fragments.choosecategory
 
 import com.ysn.dosist.db.DbManager
 import com.ysn.dosist.db.entity.CategoryTransaction
 import com.ysn.dosist.views.base.mvp.BasePresenter
-import com.ysn.dosist.views.ui.choosecategory.adapter.AdapterChooseCategory
+import com.ysn.dosist.views.ui.fragments.choosecategory.adapter.AdapterChooseCategory
 import javax.inject.Inject
 
 /**

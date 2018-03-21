@@ -1,11 +1,11 @@
 /*
- * Created by YSN Studio on 3/22/18 1:38 AM
+ * Created by YSN Studio on 3/22/18 1:42 AM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 3/22/18 1:32 AM
+ * Last modified 3/22/18 1:41 AM
  */
 
-package com.ysn.dosist.views.ui.dashboard.adapter
+package com.ysn.dosist.views.ui.activities.dashboard.adapter
 
 import android.content.Context
 import android.support.v4.content.ContextCompat

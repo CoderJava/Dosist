@@ -1,15 +1,15 @@
 /*
- * Created by YSN Studio on 3/18/18 4:51 PM
+ * Created by YSN Studio on 3/22/18 1:42 AM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 3/18/18 4:29 PM
+ * Last modified 3/22/18 1:41 AM
  */
 
 package com.ysn.dosist.di.module.splashscreen
 
 import com.ysn.dosist.db.DbManager
 import com.ysn.dosist.di.ActivityScope
-import com.ysn.dosist.views.ui.splashscreen.SplashScreenPresenter
+import com.ysn.dosist.views.ui.activities.splashscreen.SplashScreenPresenter
 import dagger.Module
 import dagger.Provides
 

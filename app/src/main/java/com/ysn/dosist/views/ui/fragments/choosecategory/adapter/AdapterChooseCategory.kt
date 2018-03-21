@@ -1,11 +1,11 @@
 /*
- * Created by YSN Studio on 3/20/18 2:15 AM
+ * Created by YSN Studio on 3/22/18 1:42 AM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 3/20/18 1:51 AM
+ * Last modified 3/22/18 1:41 AM
  */
 
-package com.ysn.dosist.views.ui.choosecategory.adapter
+package com.ysn.dosist.views.ui.fragments.choosecategory.adapter
 
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater

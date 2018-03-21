@@ -1,16 +1,16 @@
 /*
- * Created by YSN Studio on 3/22/18 1:38 AM
+ * Created by YSN Studio on 3/22/18 1:42 AM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 3/22/18 1:32 AM
+ * Last modified 3/22/18 1:41 AM
  */
 
-package com.ysn.dosist.views.ui.dashboard
+package com.ysn.dosist.views.ui.activities.dashboard
 
 import com.ysn.dosist.db.DbManager
 import com.ysn.dosist.db.entity.DetailTransaction
 import com.ysn.dosist.views.base.mvp.BasePresenter
-import com.ysn.dosist.views.ui.dashboard.adapter.AdapterTransactionDetail
+import com.ysn.dosist.views.ui.activities.dashboard.adapter.AdapterTransactionDetail
 import io.objectbox.android.AndroidScheduler
 import io.objectbox.reactive.DataSubscription
 import org.jetbrains.anko.AnkoLogger

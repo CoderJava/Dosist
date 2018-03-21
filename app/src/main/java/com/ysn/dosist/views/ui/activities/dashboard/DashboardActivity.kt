@@ -1,11 +1,11 @@
 /*
- * Created by YSN Studio on 3/22/18 1:38 AM
+ * Created by YSN Studio on 3/22/18 1:42 AM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 3/22/18 1:35 AM
+ * Last modified 3/22/18 1:41 AM
  */
 
-package com.ysn.dosist.views.ui.dashboard
+package com.ysn.dosist.views.ui.activities.dashboard
 
 import android.content.Context
 import android.os.Bundle
@@ -16,8 +16,8 @@ import com.ysn.dosist.db.entity.BalanceCurrent
 import com.ysn.dosist.di.component.dashboard.DaggerDashboardActivityComponent
 import com.ysn.dosist.di.module.dashboard.DashboardActivityModule
 import com.ysn.dosist.views.base.BaseActivity
-import com.ysn.dosist.views.ui.addtransaction.AddTransactionActivity
-import com.ysn.dosist.views.ui.dashboard.adapter.AdapterTransactionDetail
+import com.ysn.dosist.views.ui.activities.addtransaction.AddTransactionActivity
+import com.ysn.dosist.views.ui.activities.dashboard.adapter.AdapterTransactionDetail
 import kotlinx.android.synthetic.main.activity_home_bak.*
 import org.greenrobot.eventbus.EventBus
 import org.greenrobot.eventbus.Subscribe

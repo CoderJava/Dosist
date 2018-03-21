@@ -1,8 +1,8 @@
 /*
- * Created by YSN Studio on 3/22/18 1:38 AM
+ * Created by YSN Studio on 3/22/18 1:42 AM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 3/22/18 1:32 AM
+ * Last modified 3/22/18 1:41 AM
  */
 
 package com.ysn.dosist.di.component.dashboard
@@ -10,7 +10,7 @@ package com.ysn.dosist.di.component.dashboard
 import com.ysn.dosist.di.ActivityScope
 import com.ysn.dosist.di.component.AppComponent
 import com.ysn.dosist.di.module.dashboard.DashboardActivityModule
-import com.ysn.dosist.views.ui.dashboard.DashboardActivity
+import com.ysn.dosist.views.ui.activities.dashboard.DashboardActivity
 import dagger.Component
 
 /**

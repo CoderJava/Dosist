@@ -1,8 +1,8 @@
 /*
- * Created by YSN Studio on 3/18/18 4:18 PM
+ * Created by YSN Studio on 3/22/18 1:42 AM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 3/18/18 4:18 PM
+ * Last modified 3/22/18 1:41 AM
  */
 
 package com.ysn.dosist.di.component.splashscreen
@@ -10,7 +10,7 @@ package com.ysn.dosist.di.component.splashscreen
 import com.ysn.dosist.di.ActivityScope
 import com.ysn.dosist.di.component.AppComponent
 import com.ysn.dosist.di.module.splashscreen.SplashScreenActivityModule
-import com.ysn.dosist.views.ui.splashscreen.SplashScreenActivity
+import com.ysn.dosist.views.ui.activities.splashscreen.SplashScreenActivity
 import dagger.Component
 
 /**
