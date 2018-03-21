@@ -1,8 +1,8 @@
 /*
- * Created by YSN Studio on 3/22/18 3:27 AM
+ * Created by YSN Studio on 3/22/18 3:33 AM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 3/22/18 3:26 AM
+ * Last modified 3/22/18 3:32 AM
  */
 
 package com.ysn.dosist.views.ui.activities.dashboard
@@ -12,14 +12,13 @@ import android.os.Bundle
 import android.support.v4.view.ViewPager
 import android.view.View
 import com.ysn.dosist.R
-import com.ysn.dosist.di.component.dashboard.DaggerDashboardActivityComponent
-import com.ysn.dosist.di.module.dashboard.DashboardActivityModule
+import com.ysn.dosist.di.component.activities.dashboard.DaggerDashboardActivityComponent
+import com.ysn.dosist.di.module.activities.dashboard.DashboardActivityModule
 import com.ysn.dosist.views.base.BaseActivity
 import com.ysn.dosist.views.ui.activities.addtransaction.AddTransactionActivity
 import com.ysn.dosist.views.ui.activities.dashboard.adapter.DashboardPagerAdapter
 import kotlinx.android.synthetic.main.activity_home.*
 import org.jetbrains.anko.AnkoLogger
-import org.jetbrains.anko.info
 import org.jetbrains.anko.intentFor
 import javax.inject.Inject
 

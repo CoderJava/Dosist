@@ -1,15 +1,15 @@
 /*
- * Created by YSN Studio on 3/22/18 1:42 AM
+ * Created by YSN Studio on 3/22/18 3:33 AM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 3/22/18 1:41 AM
+ * Last modified 3/22/18 3:32 AM
  */
 
-package com.ysn.dosist.di.component.dashboard
+package com.ysn.dosist.di.component.activities.dashboard
 
 import com.ysn.dosist.di.ActivityScope
 import com.ysn.dosist.di.component.AppComponent
-import com.ysn.dosist.di.module.dashboard.DashboardActivityModule
+import com.ysn.dosist.di.module.activities.dashboard.DashboardActivityModule
 import com.ysn.dosist.views.ui.activities.dashboard.DashboardActivity
 import dagger.Component
 

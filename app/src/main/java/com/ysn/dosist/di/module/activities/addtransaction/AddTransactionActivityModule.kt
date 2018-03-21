@@ -1,11 +1,11 @@
 /*
- * Created by YSN Studio on 3/22/18 1:42 AM
+ * Created by YSN Studio on 3/22/18 3:33 AM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 3/22/18 1:41 AM
+ * Last modified 3/22/18 3:32 AM
  */
 
-package com.ysn.dosist.di.module.addtransaction
+package com.ysn.dosist.di.module.activities.addtransaction
 
 import com.ysn.dosist.db.DbManager
 import com.ysn.dosist.di.ActivityScope

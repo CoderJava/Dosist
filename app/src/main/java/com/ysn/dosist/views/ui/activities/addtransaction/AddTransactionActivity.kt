@@ -1,8 +1,8 @@
 /*
- * Created by YSN Studio on 3/22/18 1:42 AM
+ * Created by YSN Studio on 3/22/18 3:33 AM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 3/22/18 1:41 AM
+ * Last modified 3/22/18 3:32 AM
  */
 
 package com.ysn.dosist.views.ui.activities.addtransaction
@@ -15,8 +15,8 @@ import com.jakewharton.rxbinding2.widget.RxTextView
 import com.ysn.dosist.R
 import com.ysn.dosist.db.entity.CategoryTransaction
 import com.ysn.dosist.db.entity.DetailTransaction
-import com.ysn.dosist.di.component.addtransaction.DaggerAddTransactionActivityComponent
-import com.ysn.dosist.di.module.addtransaction.AddTransactionActivityModule
+import com.ysn.dosist.di.component.activities.addtransaction.DaggerAddTransactionActivityComponent
+import com.ysn.dosist.di.module.activities.addtransaction.AddTransactionActivityModule
 import com.ysn.dosist.views.base.BaseActivity
 import com.ysn.dosist.views.ui.fragments.choosecategory.ChooseCategoryBottomSheetDialogFragment
 import io.reactivex.android.schedulers.AndroidSchedulers

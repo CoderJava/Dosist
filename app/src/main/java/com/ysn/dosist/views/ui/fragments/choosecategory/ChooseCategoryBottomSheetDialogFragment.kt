@@ -1,8 +1,8 @@
 /*
- * Created by YSN Studio on 3/22/18 1:42 AM
+ * Created by YSN Studio on 3/22/18 3:33 AM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 3/22/18 1:41 AM
+ * Last modified 3/22/18 3:32 AM
  */
 
 package com.ysn.dosist.views.ui.fragments.choosecategory
@@ -18,8 +18,8 @@ import android.widget.RelativeLayout
 import android.widget.TextView
 import com.ysn.dosist.R
 import com.ysn.dosist.db.entity.CategoryTransaction
-import com.ysn.dosist.di.component.choosecategory.DaggerChooseCategoryBottomSheetDialogFragmentComponent
-import com.ysn.dosist.di.module.choosecategory.ChooseCategoryBottomSheetDialogFragmentModule
+import com.ysn.dosist.di.component.fragments.choosecategory.DaggerChooseCategoryBottomSheetDialogFragmentComponent
+import com.ysn.dosist.di.module.fragments.choosecategory.ChooseCategoryBottomSheetDialogFragmentModule
 import com.ysn.dosist.views.base.BaseBottomSheetDialogFragment
 import com.ysn.dosist.views.ui.fragments.choosecategory.adapter.AdapterChooseCategory
 import org.greenrobot.eventbus.EventBus

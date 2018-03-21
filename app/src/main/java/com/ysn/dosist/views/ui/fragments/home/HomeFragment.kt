@@ -1,8 +1,8 @@
 /*
- * Created by YSN Studio on 3/22/18 3:12 AM
+ * Created by YSN Studio on 3/22/18 3:33 AM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 3/22/18 3:11 AM
+ * Last modified 3/22/18 3:32 AM
  */
 
 package com.ysn.dosist.views.ui.fragments.home
@@ -17,8 +17,8 @@ import android.view.View
 import android.view.ViewGroup
 import com.ysn.dosist.R
 import com.ysn.dosist.db.entity.BalanceCurrent
-import com.ysn.dosist.di.component.home.DaggerHomeFragmentComponent
-import com.ysn.dosist.di.module.home.HomeFragmentModule
+import com.ysn.dosist.di.component.fragments.home.DaggerHomeFragmentComponent
+import com.ysn.dosist.di.module.fragments.home.HomeFragmentModule
 import com.ysn.dosist.views.base.BaseFragment
 import com.ysn.dosist.views.ui.fragments.home.adapter.AdapterTransactionDetail
 import kotlinx.android.synthetic.main.fragment_home.*

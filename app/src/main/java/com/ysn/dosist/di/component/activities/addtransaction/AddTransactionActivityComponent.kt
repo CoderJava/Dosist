@@ -1,15 +1,15 @@
 /*
- * Created by YSN Studio on 3/22/18 1:42 AM
+ * Created by YSN Studio on 3/22/18 3:33 AM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 3/22/18 1:41 AM
+ * Last modified 3/22/18 3:32 AM
  */
 
-package com.ysn.dosist.di.component.addtransaction
+package com.ysn.dosist.di.component.activities.addtransaction
 
 import com.ysn.dosist.di.ActivityScope
 import com.ysn.dosist.di.component.AppComponent
-import com.ysn.dosist.di.module.addtransaction.AddTransactionActivityModule
+import com.ysn.dosist.di.module.activities.addtransaction.AddTransactionActivityModule
 import com.ysn.dosist.views.ui.activities.addtransaction.AddTransactionActivity
 import dagger.Component
 
