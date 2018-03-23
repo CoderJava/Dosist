@@ -1,16 +1,103 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
-  ~ Created by YSN Studio on 3/23/18 9:23 PM
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by YSN Studio on 3/23/18 10:36 PM
   ~ Copyright (c) 2018. All rights reserved.
   ~
-  ~ Last modified 3/23/18 9:20 PM
+  ~ Last modified 3/23/18 10:19 PM
   -->
 
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
     tools:context="com.ysn.dosist.views.ui.activities.welcome.WelcomeActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <LinearLayout
+        android:id="@+id/linear_layout_container_input_amount_activity_welcome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginEnd="48dp"
+        android:layout_marginStart="48dp"
+        android:background="@drawable/background_edit_text"
+        android:orientation="vertical"
+        android:paddingBottom="12dp"
+        android:paddingEnd="@dimen/activity_horizontal_margin"
+        android:paddingStart="@dimen/activity_horizontal_margin"
+        android:paddingTop="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/amount"
+            android:textColor="@color/colorWhiteDarker"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rp"
+                android:textColor="@color/colorWhiteLight" />
+
+            <EditText
+                android:id="@+id/edit_text_amount_activity_welcome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:background="@android:color/transparent"
+                android:inputType="numberDecimal"
+                android:text="@string/_0"
+                android:textColor="@color/colorWhiteLight"
+                tools:ignore="LabelFor" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text_view_label_description_activity_welcome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/linear_layout_container_input_amount_activity_welcome"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_marginEnd="48dp"
+        android:layout_marginStart="48dp"
+        android:fontFamily="sans-serif-condensed"
+        android:gravity="center_horizontal"
+        android:text="@string/for_the_first_time_using_this_app_you_must_initial_your_money_right_now"
+        android:textColor="@color/colorWhiteLight" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/text_view_label_description_activity_welcome"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="24dp"
+        android:fontFamily="@font/walkway"
+        android:gravity="center"
+        android:text="@string/app_name"
+        android:textColor="@color/colorWhiteLight"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/text_view_next_activity_welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:paddingBottom="8dp"
+        android:paddingEnd="8dp"
+        android:paddingStart="8dp"
+        android:paddingTop="8dp"
+        android:text="@string/next"
+        android:textColor="@color/colorWhiteLight"
+        android:textSize="16sp" />
+
+</RelativeLayout>
