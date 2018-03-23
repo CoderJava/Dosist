@@ -1,8 +1,8 @@
 /*
- * Created by YSN Studio on 3/22/18 1:42 AM
+ * Created by YSN Studio on 3/23/18 11:02 PM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 3/22/18 1:41 AM
+ * Last modified 3/23/18 10:56 PM
  */
 
 package com.ysn.dosist.views.ui.activities.splashscreen
@@ -15,4 +15,6 @@ import com.ysn.dosist.views.base.mvp.BaseView
 interface SplashScreenView : BaseView {
 
     fun setupCategoryTransactionData()
+
+    fun setupCategoryAlready()
 }

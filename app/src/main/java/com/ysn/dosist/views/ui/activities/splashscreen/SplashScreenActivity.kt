@@ -1,8 +1,8 @@
 /*
- * Created by YSN Studio on 3/23/18 9:24 PM
+ * Created by YSN Studio on 3/23/18 11:02 PM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 3/23/18 9:24 PM
+ * Last modified 3/23/18 10:57 PM
  */
 
 package com.ysn.dosist.views.ui.activities.splashscreen
@@ -12,6 +12,7 @@ import com.ysn.dosist.R
 import com.ysn.dosist.di.component.activities.splashscreen.DaggerSplashScreenActivityComponent
 import com.ysn.dosist.di.module.activities.splashscreen.SplashScreenActivityModule
 import com.ysn.dosist.views.base.BaseActivity
+import com.ysn.dosist.views.ui.activities.dashboard.DashboardActivity
 import com.ysn.dosist.views.ui.activities.welcome.WelcomeActivity
 import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
@@ -34,7 +35,7 @@ class SplashScreenActivity : BaseActivity(), SplashScreenView {
 
     override fun onResume() {
         super.onResume()
-        presenter.onSetupCategoryTransactionData()
+        presenter.onCheckSetup()
     }
 
     override fun onError() {
@@ -48,6 +49,10 @@ class SplashScreenActivity : BaseActivity(), SplashScreenView {
                 .build()
                 .inject(this)
         presenter.attachView(this)
+    }
+
+    override fun setupCategoryAlready() {
+        startActivity(intentFor<DashboardActivity>().clearTask().newTask())
     }
 
     override fun setupCategoryTransactionData() {
