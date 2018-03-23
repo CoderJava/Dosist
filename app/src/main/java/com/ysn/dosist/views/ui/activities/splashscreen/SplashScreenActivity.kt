@@ -1,8 +1,8 @@
 /*
- * Created by YSN Studio on 3/22/18 3:33 AM
+ * Created by YSN Studio on 3/23/18 9:24 PM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 3/22/18 3:32 AM
+ * Last modified 3/23/18 9:24 PM
  */
 
 package com.ysn.dosist.views.ui.activities.splashscreen
@@ -12,7 +12,7 @@ import com.ysn.dosist.R
 import com.ysn.dosist.di.component.activities.splashscreen.DaggerSplashScreenActivityComponent
 import com.ysn.dosist.di.module.activities.splashscreen.SplashScreenActivityModule
 import com.ysn.dosist.views.base.BaseActivity
-import com.ysn.dosist.views.ui.activities.dashboard.DashboardActivity
+import com.ysn.dosist.views.ui.activities.welcome.WelcomeActivity
 import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
@@ -56,7 +56,7 @@ class SplashScreenActivity : BaseActivity(), SplashScreenView {
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe {
-                    startActivity(intentFor<DashboardActivity>().clearTask().newTask())
+                    startActivity(intentFor<WelcomeActivity>().clearTask().newTask())
                 }
     }
 
