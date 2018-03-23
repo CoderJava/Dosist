@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?><!--
-  ~ Created by YSN Studio on 3/22/18 1:42 AM
+  ~ Created by YSN Studio on 3/23/18 9:23 PM
   ~ Copyright (c) 2018. All rights reserved.
   ~
-  ~ Last modified 3/22/18 1:41 AM
+  ~ Last modified 3/23/18 9:23 PM
   -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.ysn.dosist">
@@ -15,15 +15,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.ysn.dosist.views.ui.activities.splashscreen.SplashScreenActivity">
+        <activity android:name=".views.ui.activities.splashscreen.SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.ysn.dosist.views.ui.activities.dashboard.DashboardActivity" />
-        <activity android:name="com.ysn.dosist.views.ui.activities.addtransaction.AddTransactionActivity" />
+        <activity android:name=".views.ui.activities.dashboard.DashboardActivity" />
+        <activity android:name=".views.ui.activities.addtransaction.AddTransactionActivity" />
+        <activity android:name=".views.ui.activities.welcome.WelcomeActivity" />
     </application>
 
 </manifest>
