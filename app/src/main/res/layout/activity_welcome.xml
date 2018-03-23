@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Created by YSN Studio on 3/23/18 9:23 PM
+  ~ Copyright (c) 2018. All rights reserved.
+  ~
+  ~ Last modified 3/23/18 9:20 PM
+  -->
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ysn.dosist.views.ui.activities.welcome.WelcomeActivity">
+
+</android.support.constraint.ConstraintLayout>
