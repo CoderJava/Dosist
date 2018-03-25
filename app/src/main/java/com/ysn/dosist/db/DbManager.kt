@@ -1,8 +1,8 @@
 /*
- * Created by YSN Studio on 3/18/18 10:36 PM
+ * Created by YSN Studio on 3/25/18 1:31 PM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 3/18/18 10:17 PM
+ * Last modified 3/25/18 1:31 PM
  */
 
 package com.ysn.dosist.db
@@ -16,6 +16,9 @@ import com.ysn.dosist.views.base.App
 import io.objectbox.Box
 import io.objectbox.query.Query
 import org.jetbrains.anko.AnkoLogger
+import org.joda.time.DateTime
+import java.text.SimpleDateFormat
+import java.util.*
 import javax.inject.Inject
 
 /**
@@ -84,6 +87,21 @@ class DbManager @Inject constructor(val application: Application) : AnkoLogger {
      */
     fun queryGetAllTransactionBox(): Query<DetailTransaction> {
         return detailTransactionBox.query().order(DetailTransaction_.id).build()
+    }
+
+    /**
+     * Get all Detail Transaction by Month and Year
+     * @param month - Value month transaction filter
+     * @param year - Value year transaction filter
+     */
+    fun queryGetAllTransactionByMonthAndYear(month: String, year: String): Query<DetailTransaction> {
+        return detailTransactionBox.query().order(DetailTransaction_.id).filter {
+            val strDate = SimpleDateFormat("MMM yy", Locale.US).format(DateTime(it.timestamp).toDate())
+                    .split(" ")
+            val monthTransaction = strDate[0]
+            val yearTransaction = strDate[1]
+            month == monthTransaction && year == yearTransaction
+        }.build()
     }
 
     /**
