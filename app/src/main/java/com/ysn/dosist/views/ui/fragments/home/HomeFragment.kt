@@ -1,8 +1,8 @@
 /*
- * Created by YSN Studio on 3/22/18 3:33 AM
+ * Created by YSN Studio on 3/25/18 11:48 AM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 3/22/18 3:32 AM
+ * Last modified 3/25/18 11:43 AM
  */
 
 package com.ysn.dosist.views.ui.fragments.home
@@ -24,6 +24,7 @@ import com.ysn.dosist.views.ui.fragments.home.adapter.AdapterTransactionDetail
 import kotlinx.android.synthetic.main.fragment_home.*
 import org.greenrobot.eventbus.EventBus
 import org.greenrobot.eventbus.Subscribe
+import org.jetbrains.anko.AnkoLogger
 import java.text.DecimalFormat
 import javax.inject.Inject
 
@@ -31,7 +32,7 @@ import javax.inject.Inject
 /**
  * A simple [Fragment] subclass.
  */
-class HomeFragment : BaseFragment(), HomeView {
+class HomeFragment : BaseFragment(), HomeView, AnkoLogger {
 
     @Inject
     lateinit var presenter: HomePresenter
@@ -92,9 +93,8 @@ class HomeFragment : BaseFragment(), HomeView {
     fun onMessageEvent(mapData: HashMap<String, Any>) {
         val fromClass = mapData["fromClass"].toString().toLowerCase()
         when (fromClass) {
-            "AddTransactionDetail" -> {
+            "addtransactionactivity" -> {
                 presenter.onRefreshBalanceCurrent()
-                presenter.onRefreshTransactionDetail()
             }
             else -> {
                 /* nothing to do in here */
@@ -123,22 +123,20 @@ class HomeFragment : BaseFragment(), HomeView {
     }
 
     private fun setupBalanceCurrent(resultBalanceCurrent: BalanceCurrent) {
-        text_view_overview_fragment_home.text = resultBalanceCurrent.balance.toString()
         val decimalFormat = DecimalFormat("#,###")
+        val balanceFormat = decimalFormat.format(resultBalanceCurrent.balance)
+                .replace(",", ".")
         val incomeFormat = decimalFormat.format(resultBalanceCurrent.income)
                 .replace(",", ".")
         val expenseFormat = decimalFormat.format(resultBalanceCurrent.expense)
                 .replace(",", ".")
+        text_view_overview_fragment_home.text = balanceFormat
         text_view_income_fragment_home.text = getString(R.string.income_format, incomeFormat)
         text_view_expense_fragment_home.text = getString(R.string.expense_format, expenseFormat)
     }
 
     override fun refreshBalanceCurrent(resultBalanceCurrent: BalanceCurrent) {
         setupBalanceCurrent(resultBalanceCurrent = resultBalanceCurrent)
-    }
-
-    override fun refreshTransactionDetail() {
-        /* nothing to do in here */
     }
 
 }

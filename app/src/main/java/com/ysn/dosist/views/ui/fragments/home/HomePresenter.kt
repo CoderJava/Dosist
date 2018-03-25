@@ -1,8 +1,8 @@
 /*
- * Created by YSN Studio on 3/22/18 3:11 AM
+ * Created by YSN Studio on 3/25/18 11:48 AM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 3/22/18 3:03 AM
+ * Last modified 3/25/18 11:45 AM
  */
 
 package com.ysn.dosist.views.ui.fragments.home
@@ -13,12 +13,13 @@ import com.ysn.dosist.views.base.mvp.BasePresenter
 import com.ysn.dosist.views.ui.fragments.home.adapter.AdapterTransactionDetail
 import io.objectbox.android.AndroidScheduler
 import io.objectbox.reactive.DataSubscription
+import org.jetbrains.anko.AnkoLogger
 import javax.inject.Inject
 
 /**
  * Created by yudisetiawan on 3/22/18.
  */
-class HomePresenter @Inject constructor(private val dbManager: DbManager) : BasePresenter<HomeView>() {
+class HomePresenter @Inject constructor(private val dbManager: DbManager) : BasePresenter<HomeView>(), AnkoLogger {
 
     private lateinit var adapterTransactionDetail: AdapterTransactionDetail
     private lateinit var transactiondetailSubscription: DataSubscription
@@ -52,17 +53,6 @@ class HomePresenter @Inject constructor(private val dbManager: DbManager) : Base
     fun onRefreshBalanceCurrent() {
         val resultBalanceCurrent = dbManager.queryBalanceCurrentBox()
         view?.refreshBalanceCurrent(resultBalanceCurrent = resultBalanceCurrent)
-    }
-
-    fun onRefreshTransactionDetail() {
-        transactiondetailSubscription = dbManager.queryGetAllTransactionBox()
-                .subscribe()
-                .on(AndroidScheduler.mainThread())
-                .observer { detailTransactions: MutableList<DetailTransaction> ->
-                    this.detailTransactions.addAll(detailTransactions)
-                    adapterTransactionDetail.refresh(this.detailTransactions)
-                    view?.refreshTransactionDetail()
-                }
     }
 
 }

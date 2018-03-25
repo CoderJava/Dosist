@@ -1,8 +1,8 @@
 /*
- * Created by YSN Studio on 3/22/18 3:11 AM
+ * Created by YSN Studio on 3/25/18 11:48 AM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 3/22/18 3:05 AM
+ * Last modified 3/25/18 11:45 AM
  */
 
 package com.ysn.dosist.views.ui.fragments.home
@@ -25,5 +25,4 @@ interface HomeView : BaseView {
 
     fun refreshBalanceCurrent(resultBalanceCurrent: BalanceCurrent)
 
-    fun refreshTransactionDetail()
 }
