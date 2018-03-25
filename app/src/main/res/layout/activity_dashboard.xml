@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?><!--
-  ~ Created by YSN Studio on 3/22/18 1:42 AM
+  ~ Created by YSN Studio on 3/25/18 1:05 PM
   ~ Copyright (c) 2018. All rights reserved.
   ~
-  ~ Last modified 3/22/18 1:41 AM
+  ~ Last modified 3/25/18 1:05 PM
   -->
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -14,22 +14,22 @@
     tools:context=".views.ui.activities.dashboard.DashboardActivity">
 
     <include
-        android:id="@+id/toolbar_activity_home"
+        android:id="@+id/toolbar_activity_dashboard"
         layout="@layout/toolbar_normal" />
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/toolbar_activity_home">
+        android:layout_below="@+id/toolbar_activity_dashboard">
 
         <android.support.v4.view.ViewPager
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/view_pager_activity_home"
-            android:layout_above="@+id/linear_layout_container_bottom_menu_bar_activity_home" />
+            android:id="@+id/view_pager_activity_dashboard"
+            android:layout_above="@+id/linear_layout_container_bottom_menu_bar_activity_dashboard" />
 
         <LinearLayout
-            android:id="@+id/linear_layout_container_bottom_menu_bar_activity_home"
+            android:id="@+id/linear_layout_container_bottom_menu_bar_activity_dashboard"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
@@ -43,7 +43,7 @@
                 android:layout_weight="1">
 
                 <View
-                    android:id="@+id/view_divider_menu_home_active_activity_home"
+                    android:id="@+id/view_divider_menu_home_active_activity_dashboard"
                     android:layout_width="24dp"
                     android:layout_height="3dp"
                     android:layout_alignParentBottom="true"
@@ -51,10 +51,10 @@
                     android:background="@drawable/tab_menu_active" />
 
                 <ImageView
-                    android:id="@+id/image_view_home_active_activity_home"
+                    android:id="@+id/image_view_home_active_activity_dashboard"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_above="@+id/view_divider_menu_home_active_activity_home"
+                    android:layout_above="@+id/view_divider_menu_home_active_activity_dashboard"
                     android:layout_centerHorizontal="true"
                     android:layout_marginBottom="8dp"
                     android:contentDescription="@string/image_view_menu_home_active"
@@ -62,10 +62,10 @@
                     android:visibility="visible" />
 
                 <ImageView
-                    android:id="@+id/image_view_home_inactive_activity_home"
+                    android:id="@+id/image_view_home_inactive_activity_dashboard"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_above="@+id/view_divider_menu_home_active_activity_home"
+                    android:layout_above="@+id/view_divider_menu_home_active_activity_dashboard"
                     android:layout_centerHorizontal="true"
                     android:layout_marginBottom="8dp"
                     android:contentDescription="@string/image_view_menu_home_inactive"
@@ -80,7 +80,7 @@
                 android:layout_weight="1">
 
                 <View
-                    android:id="@+id/view_divider_menu_history_active_activity_home"
+                    android:id="@+id/view_divider_menu_history_active_activity_dashboard"
                     android:layout_width="24dp"
                     android:layout_height="3dp"
                     android:layout_alignParentBottom="true"
@@ -89,10 +89,10 @@
                     android:visibility="invisible" />
 
                 <ImageView
-                    android:id="@+id/image_view_history_active_activity_home"
+                    android:id="@+id/image_view_history_active_activity_dashboard"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_above="@+id/view_divider_menu_history_active_activity_home"
+                    android:layout_above="@+id/view_divider_menu_history_active_activity_dashboard"
                     android:layout_centerHorizontal="true"
                     android:layout_marginBottom="8dp"
                     android:contentDescription="@string/image_view_menu_history_active"
@@ -100,10 +100,10 @@
                     android:visibility="gone" />
 
                 <ImageView
-                    android:id="@+id/image_view_history_inactive_activity_home"
+                    android:id="@+id/image_view_history_inactive_activity_dashboard"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_above="@+id/view_divider_menu_history_active_activity_home"
+                    android:layout_above="@+id/view_divider_menu_history_active_activity_dashboard"
                     android:layout_centerHorizontal="true"
                     android:layout_marginBottom="8dp"
                     android:contentDescription="@string/image_view_menu_history_inactive"
@@ -115,7 +115,7 @@
         </LinearLayout>
 
         <android.support.design.widget.FloatingActionButton
-            android:id="@+id/floating_action_button_add_transaction_activity_home"
+            android:id="@+id/floating_action_button_add_transaction_activity_dashboard"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"

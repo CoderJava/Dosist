@@ -1,8 +1,8 @@
 /*
- * Created by YSN Studio on 3/22/18 3:33 AM
+ * Created by YSN Studio on 3/25/18 1:05 PM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 3/22/18 3:32 AM
+ * Last modified 3/25/18 1:05 PM
  */
 
 package com.ysn.dosist.views.ui.activities.dashboard
@@ -17,7 +17,7 @@ import com.ysn.dosist.di.module.activities.dashboard.DashboardActivityModule
 import com.ysn.dosist.views.base.BaseActivity
 import com.ysn.dosist.views.ui.activities.addtransaction.AddTransactionActivity
 import com.ysn.dosist.views.ui.activities.dashboard.adapter.DashboardPagerAdapter
-import kotlinx.android.synthetic.main.activity_home.*
+import kotlinx.android.synthetic.main.activity_dashboard.*
 import org.jetbrains.anko.AnkoLogger
 import org.jetbrains.anko.intentFor
 import javax.inject.Inject
@@ -29,19 +29,19 @@ class DashboardActivity : BaseActivity(), DashboardView, View.OnClickListener, A
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_home)
+        setContentView(R.layout.activity_dashboard)
         initListeners()
         initViews()
     }
 
     private fun initViews() {
         val dashboardPagerAdapter = DashboardPagerAdapter(fragmentManager = supportFragmentManager)
-        view_pager_activity_home.adapter = dashboardPagerAdapter
+        view_pager_activity_dashboard.adapter = dashboardPagerAdapter
     }
 
     private fun initListeners() {
-        floating_action_button_add_transaction_activity_home.setOnClickListener(this)
-        view_pager_activity_home.addOnPageChangeListener(object : ViewPager.OnPageChangeListener {
+        floating_action_button_add_transaction_activity_dashboard.setOnClickListener(this)
+        view_pager_activity_dashboard.addOnPageChangeListener(object : ViewPager.OnPageChangeListener {
             override fun onPageScrollStateChanged(state: Int) {
                 /* nothing to do in here */
             }
@@ -60,26 +60,26 @@ class DashboardActivity : BaseActivity(), DashboardView, View.OnClickListener, A
     }
 
     private fun tabHomeSelected() {
-        view_divider_menu_home_active_activity_home.visibility = View.VISIBLE
-        view_divider_menu_history_active_activity_home.visibility = View.INVISIBLE
-        image_view_home_active_activity_home.visibility = View.VISIBLE
-        image_view_home_inactive_activity_home.visibility = View.INVISIBLE
-        image_view_history_active_activity_home.visibility = View.INVISIBLE
-        image_view_history_inactive_activity_home.visibility = View.VISIBLE
+        view_divider_menu_home_active_activity_dashboard.visibility = View.VISIBLE
+        view_divider_menu_history_active_activity_dashboard.visibility = View.INVISIBLE
+        image_view_home_active_activity_dashboard.visibility = View.VISIBLE
+        image_view_home_inactive_activity_dashboard.visibility = View.INVISIBLE
+        image_view_history_active_activity_dashboard.visibility = View.INVISIBLE
+        image_view_history_inactive_activity_dashboard.visibility = View.VISIBLE
     }
 
     private fun tabHistoryTransactionSelected() {
-        view_divider_menu_home_active_activity_home.visibility = View.INVISIBLE
-        view_divider_menu_history_active_activity_home.visibility = View.VISIBLE
-        image_view_home_active_activity_home.visibility = View.INVISIBLE
-        image_view_home_inactive_activity_home.visibility = View.VISIBLE
-        image_view_history_active_activity_home.visibility = View.VISIBLE
-        image_view_history_inactive_activity_home.visibility = View.INVISIBLE
+        view_divider_menu_home_active_activity_dashboard.visibility = View.INVISIBLE
+        view_divider_menu_history_active_activity_dashboard.visibility = View.VISIBLE
+        image_view_home_active_activity_dashboard.visibility = View.INVISIBLE
+        image_view_home_inactive_activity_dashboard.visibility = View.VISIBLE
+        image_view_history_active_activity_dashboard.visibility = View.VISIBLE
+        image_view_history_inactive_activity_dashboard.visibility = View.INVISIBLE
     }
 
     override fun onClick(view: View) {
         when (view.id) {
-            R.id.floating_action_button_add_transaction_activity_home -> startActivity(intentFor<AddTransactionActivity>())
+            R.id.floating_action_button_add_transaction_activity_dashboard -> startActivity(intentFor<AddTransactionActivity>())
             else -> {
                 /** nothing to do in here */
             }
