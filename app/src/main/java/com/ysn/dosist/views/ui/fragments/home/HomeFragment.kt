@@ -1,8 +1,8 @@
 /*
- * Created by YSN Studio on 3/25/18 11:48 AM
+ * Created by YSN Studio on 3/25/18 1:59 PM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 3/25/18 11:43 AM
+ * Last modified 3/25/18 1:44 PM
  */
 
 package com.ysn.dosist.views.ui.fragments.home
@@ -114,11 +114,11 @@ class HomeFragment : BaseFragment(), HomeView, AnkoLogger {
         if (adapterTransactionDetail.itemCount == 0) {
             progress_bar_fragment_home.visibility = View.GONE
             recycler_view_transaction_detail_fragment_home.visibility = View.INVISIBLE
-            lottine_animatin_view_empty_box_fragment_home.visibility = View.VISIBLE
+            lottie_animation_view_empty_box_fragment_home.visibility = View.VISIBLE
         } else {
             progress_bar_fragment_home.visibility = View.GONE
             recycler_view_transaction_detail_fragment_home.visibility = View.VISIBLE
-            lottine_animatin_view_empty_box_fragment_home.visibility = View.GONE
+            lottie_animation_view_empty_box_fragment_home.visibility = View.GONE
         }
     }
 

@@ -1,8 +1,8 @@
 /*
- * Created by YSN Studio on 3/25/18 11:48 AM
+ * Created by YSN Studio on 3/25/18 1:59 PM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 3/25/18 11:45 AM
+ * Last modified 3/25/18 1:32 PM
  */
 
 package com.ysn.dosist.views.ui.fragments.home
@@ -22,7 +22,7 @@ import javax.inject.Inject
 class HomePresenter @Inject constructor(private val dbManager: DbManager) : BasePresenter<HomeView>(), AnkoLogger {
 
     private lateinit var adapterTransactionDetail: AdapterTransactionDetail
-    private lateinit var transactiondetailSubscription: DataSubscription
+    private lateinit var transactionDetailSubscription: DataSubscription
     private lateinit var detailTransactions: ArrayList<DetailTransaction>
 
     fun onLoadBalanceCurrent() {
@@ -38,7 +38,7 @@ class HomePresenter @Inject constructor(private val dbManager: DbManager) : Base
                 dbManager = dbManager,
                 detailTransactions = detailTransactions
         )
-        transactiondetailSubscription = dbManager.queryGetAllTransactionBox()
+        transactionDetailSubscription = dbManager.queryGetAllTransactionBox()
                 .subscribe()
                 .on(AndroidScheduler.mainThread())
                 .observer { detailTransactions: MutableList<DetailTransaction>? ->
