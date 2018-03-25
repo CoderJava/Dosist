@@ -1,11 +1,12 @@
 <!--
-  ~ Created by YSN Studio on 3/25/18 12:53 PM
+  ~ Created by YSN Studio on 3/25/18 1:46 PM
   ~ Copyright (c) 2018. All rights reserved.
   ~
-  ~ Last modified 3/25/18 12:52 PM
+  ~ Last modified 3/25/18 1:45 PM
   -->
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -27,7 +28,8 @@
         android:paddingBottom="5dp"
         android:paddingEnd="8dp"
         android:paddingStart="16dp"
-        android:paddingTop="5dp">
+        android:paddingTop="5dp"
+        tools:ignore="RelativeOverlap">
 
         <TextView
             android:id="@+id/text_view_value_filter_fragment_history_transaction"
@@ -55,5 +57,22 @@
         android:layout_below="@+id/linear_layout_container_filter_fragment_history_transaction"
         android:paddingBottom="8dp"
         android:paddingTop="8dp" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar_fragment_history_transaction"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminate="true" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottie_animation_view_empty_box_fragment_history_transaction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/empty_box" />
 
 </RelativeLayout>
