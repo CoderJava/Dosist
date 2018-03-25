@@ -1,8 +1,8 @@
 /*
- * Created by YSN Studio on 3/22/18 1:42 AM
+ * Created by YSN Studio on 3/25/18 11:47 AM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 3/22/18 1:41 AM
+ * Last modified 3/25/18 11:30 AM
  */
 
 package com.ysn.dosist.views.ui.activities.addtransaction
@@ -12,7 +12,6 @@ import com.ysn.dosist.db.DbManager
 import com.ysn.dosist.db.entity.DetailTransaction
 import com.ysn.dosist.views.base.mvp.BasePresenter
 import org.jetbrains.anko.AnkoLogger
-import org.jetbrains.anko.info
 import javax.inject.Inject
 
 /**
@@ -21,10 +20,6 @@ import javax.inject.Inject
 class AddTransactionPresenter @Inject constructor(private val dbManager: DbManager) : BasePresenter<AddTransactionView>(), AnkoLogger {
 
     fun onSaveTransaction(detailTransaction: DetailTransaction) {
-        val categoryTransaction = dbManager.getAllCategoryTransactionBox()
-        categoryTransaction.forEach {
-            info { "idCategory: ${it.id} & nameCategory: ${it.name}" }
-        }
         val context = view?.getViewContext()
         when {
             detailTransaction.subject.isEmpty() -> {
@@ -51,12 +46,14 @@ class AddTransactionPresenter @Inject constructor(private val dbManager: DbManag
                 var incomeBalanceCurrent = balanceCurrent.income
                 incomeBalanceCurrent += detailTransaction.amount
                 balanceCurrent.income = incomeBalanceCurrent
+                balanceCurrent.balance += incomeBalanceCurrent
                 dbManager.putBalanceCurrentBox(balanceCurrent = balanceCurrent)
             }
             detailTransaction.type.toLowerCase() == "expense" -> {
                 var expenseBalanceCurrent = dbManager.queryBalanceCurrentBox().expense
                 expenseBalanceCurrent += detailTransaction.amount
                 balanceCurrent.expense = expenseBalanceCurrent
+                balanceCurrent.balance -= expenseBalanceCurrent
                 dbManager.putBalanceCurrentBox(balanceCurrent = balanceCurrent)
             }
         }
