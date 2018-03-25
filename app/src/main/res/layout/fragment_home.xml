@@ -1,8 +1,8 @@
 <!--
-  ~ Created by YSN Studio on 3/22/18 3:11 AM
+  ~ Created by YSN Studio on 3/25/18 1:45 PM
   ~ Copyright (c) 2018. All rights reserved.
   ~
-  ~ Last modified 3/22/18 2:14 AM
+  ~ Last modified 3/25/18 1:44 PM
   -->
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -203,7 +203,7 @@
             android:indeterminate="true" />
 
         <com.airbnb.lottie.LottieAnimationView
-            android:id="@+id/lottine_animatin_view_empty_box_fragment_home"
+            android:id="@+id/lottie_animation_view_empty_box_fragment_home"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
