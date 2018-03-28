@@ -1,8 +1,8 @@
 /*
- * Created by YSN Studio on 3/25/18 1:05 PM
+ * Created by YSN Studio on 3/28/18 8:01 AM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 3/25/18 1:05 PM
+ * Last modified 3/28/18 7:55 AM
  */
 
 package com.ysn.dosist.views.ui.activities.dashboard
@@ -15,6 +15,7 @@ import com.ysn.dosist.R
 import com.ysn.dosist.di.component.activities.dashboard.DaggerDashboardActivityComponent
 import com.ysn.dosist.di.module.activities.dashboard.DashboardActivityModule
 import com.ysn.dosist.views.base.BaseActivity
+import com.ysn.dosist.views.ui.activities.about.AboutActivity
 import com.ysn.dosist.views.ui.activities.addtransaction.AddTransactionActivity
 import com.ysn.dosist.views.ui.activities.dashboard.adapter.DashboardPagerAdapter
 import kotlinx.android.synthetic.main.activity_dashboard.*
@@ -41,6 +42,7 @@ class DashboardActivity : BaseActivity(), DashboardView, View.OnClickListener, A
 
     private fun initListeners() {
         floating_action_button_add_transaction_activity_dashboard.setOnClickListener(this)
+        image_view_about_app_activity_dashboard.setOnClickListener(this)
         view_pager_activity_dashboard.addOnPageChangeListener(object : ViewPager.OnPageChangeListener {
             override fun onPageScrollStateChanged(state: Int) {
                 /* nothing to do in here */
@@ -80,6 +82,7 @@ class DashboardActivity : BaseActivity(), DashboardView, View.OnClickListener, A
     override fun onClick(view: View) {
         when (view.id) {
             R.id.floating_action_button_add_transaction_activity_dashboard -> startActivity(intentFor<AddTransactionActivity>())
+            R.id.image_view_about_app_activity_dashboard -> startActivity(intentFor<AboutActivity>())
             else -> {
                 /** nothing to do in here */
             }
