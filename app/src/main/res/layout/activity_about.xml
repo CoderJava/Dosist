@@ -1,16 +1,64 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
-  ~ Created by YSN Studio on 3/28/18 7:56 AM
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by YSN Studio on 3/29/18 9:00 PM
   ~ Copyright (c) 2018. All rights reserved.
   ~
-  ~ Last modified 3/28/18 7:55 AM
+  ~ Last modified 3/29/18 8:58 PM
   -->
 
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".views.ui.activities.about.AboutActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:id="@+id/text_view_logo_app_activity_about"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/background_edit_text"
+        android:fontFamily="@font/walkway"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingEnd="@dimen/activity_horizontal_margin"
+        android:paddingStart="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:text="@string/ds"
+        android:textColor="@color/colorWhiteLight"
+        android:textSize="48sp" />
+
+    <TextView
+        android:id="@+id/text_view_app_name_activity_about"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_view_logo_app_activity_about"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:fontFamily="@font/walkway"
+        android:text="@string/app_name"
+        android:textColor="@color/colorWhiteLight"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/text_view_version_name_activity_about"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_view_app_name_activity_about"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:text="@string/_1_0_0"
+        android:textColor="@color/colorWhiteLight" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/developed_by_ysn_studio"
+        android:textColor="@color/colorWhiteLight" />
+
+</RelativeLayout>
