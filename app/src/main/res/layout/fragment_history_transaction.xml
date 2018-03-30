@@ -1,8 +1,8 @@
 <!--
-  ~ Created by YSN Studio on 3/27/18 9:21 PM
+  ~ Created by YSN Studio on 3/30/18 6:38 PM
   ~ Copyright (c) 2018. All rights reserved.
   ~
-  ~ Last modified 3/27/18 8:23 AM
+  ~ Last modified 3/29/18 9:25 PM
   -->
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -29,7 +29,6 @@
         android:paddingEnd="8dp"
         android:paddingStart="16dp"
         android:paddingTop="5dp"
-        android:visibility="invisible"
         tools:ignore="RelativeOverlap">
 
         <TextView
