@@ -1,8 +1,8 @@
 /*
- * Created by YSN Studio on 3/25/18 2:00 PM
+ * Created by YSN Studio on 3/30/18 6:41 PM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 3/25/18 1:57 PM
+ * Last modified 3/30/18 11:52 AM
  */
 
 package com.ysn.dosist.views.ui.fragments.history
@@ -19,6 +19,7 @@ import com.ysn.dosist.R
 import com.ysn.dosist.di.component.fragments.history.DaggerHIstoryTransactionFragmentComponent
 import com.ysn.dosist.di.module.fragments.history.HistoryTransactionFragmentModule
 import com.ysn.dosist.views.base.BaseFragment
+import com.ysn.dosist.views.ui.fragments.filterhistory.FilterHistoryTransactionBottomSheetDialogFragment
 import com.ysn.dosist.views.ui.fragments.home.adapter.AdapterTransactionDetail
 import kotlinx.android.synthetic.main.fragment_history_transaction.*
 import org.greenrobot.eventbus.EventBus
@@ -29,7 +30,9 @@ import javax.inject.Inject
 /**
  * A simple [Fragment] subclass.
  */
-class HistoryTransactionFragment : BaseFragment(), HistoryTransactionView {
+class HistoryTransactionFragment : BaseFragment(), HistoryTransactionView, View.OnClickListener {
+
+    private val TAG = javaClass.simpleName
 
     private lateinit var title: String
     private var page: Int = 0
@@ -56,8 +59,20 @@ class HistoryTransactionFragment : BaseFragment(), HistoryTransactionView {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         registerEventBus()
+        initListeners()
+        initFilter()
+        doLoadData()
+    }
+
+    private fun initFilter() {
         presenter.onInitFilter()
-        presenter.onLoadHistoryTransaction()
+    }
+
+    private fun doLoadData() {
+        val monthYearFilter = text_view_value_filter_fragment_history_transaction.text.toString().trim().split(" ")
+        val monthFilter = monthYearFilter[0]
+        val yearFilter = monthYearFilter[1]
+        presenter.onLoadHistoryTransaction(month = monthFilter, year = yearFilter)
     }
 
     override fun onDestroy() {
@@ -86,13 +101,17 @@ class HistoryTransactionFragment : BaseFragment(), HistoryTransactionView {
         presenter.attachView(this)
     }
 
+    private fun initListeners() {
+        linear_layout_container_filter_fragment_history_transaction.setOnClickListener(this)
+    }
+
     override fun initFilter(filter: String) {
         text_view_value_filter_fragment_history_transaction.text = filter
     }
 
     override fun getViewContext(): Context? = context
 
-    override fun loadHistoryTransaction (adapterTransactionDetail: AdapterTransactionDetail) {
+    override fun loadHistoryTransaction(adapterTransactionDetail: AdapterTransactionDetail) {
         recycler_view_history_transaction_fragment_history_transaction.layoutManager = LinearLayoutManager(context)
         recycler_view_history_transaction_fragment_history_transaction.adapter = adapterTransactionDetail
         if (adapterTransactionDetail.itemCount == 0) {
@@ -109,7 +128,41 @@ class HistoryTransactionFragment : BaseFragment(), HistoryTransactionView {
     @Subscribe
     fun onMessageEvent(mapData: HashMap<String, Any>) {
         val fromClass = mapData["fromClass"].toString().toLowerCase()
-        /* I don't know what I'm doing in here */
+        when (fromClass) {
+            "filterhistorytransactionbottomsheetdialogfragment" -> {
+                val monthYearFilter = mapData["monthYearFilter"].toString().split(" ")
+                val monthFilter = monthYearFilter[0]
+                val yearFilter = monthYearFilter[1].let { it.substring(2, it.length) }
+                text_view_value_filter_fragment_history_transaction.text = StringBuilder("$monthFilter $yearFilter")
+                presenter.onRefreshHistoryTransaction(month = monthFilter, year = yearFilter)
+            }
+            else -> {
+                /* nothing to do in here */
+            }
+        }
+    }
+
+    override fun onClick(view: View) {
+        when (view.id) {
+            R.id.linear_layout_container_filter_fragment_history_transaction -> {
+                val filterHistoryTransactionBottomSheetDialogFragment = FilterHistoryTransactionBottomSheetDialogFragment()
+                val filter = text_view_value_filter_fragment_history_transaction.text.toString().trim().split(" ")
+                val month = filter[0]
+                val year = filter[1]
+                val bundle = Bundle()
+                bundle.putString("month", month)
+                bundle.putString("year", year)
+                filterHistoryTransactionBottomSheetDialogFragment.arguments = bundle
+                filterHistoryTransactionBottomSheetDialogFragment.show(fragmentManager, TAG)
+            }
+            else -> {
+                /* nothing to do in here */
+            }
+        }
+    }
+
+    override fun refreshHistoryTransaction() {
+        /* nothing to do in here */
     }
 
 }

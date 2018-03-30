@@ -1,8 +1,8 @@
 /*
- * Created by YSN Studio on 3/25/18 2:00 PM
+ * Created by YSN Studio on 3/30/18 6:41 PM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 3/25/18 1:52 PM
+ * Last modified 3/30/18 11:29 AM
  */
 
 package com.ysn.dosist.views.ui.fragments.history
@@ -21,4 +21,6 @@ interface HistoryTransactionView : BaseView {
     fun getViewContext(): Context?
 
     fun loadHistoryTransaction(adapterTransactionDetail: AdapterTransactionDetail)
+
+    fun refreshHistoryTransaction()
 }

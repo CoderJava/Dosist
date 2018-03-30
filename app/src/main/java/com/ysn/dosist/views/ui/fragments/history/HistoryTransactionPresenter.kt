@@ -1,8 +1,8 @@
 /*
- * Created by YSN Studio on 3/25/18 2:00 PM
+ * Created by YSN Studio on 3/30/18 6:41 PM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 3/25/18 1:52 PM
+ * Last modified 3/30/18 11:50 AM
  */
 
 package com.ysn.dosist.views.ui.fragments.history
@@ -15,6 +15,7 @@ import io.objectbox.android.AndroidScheduler
 import java.text.SimpleDateFormat
 import java.util.*
 import javax.inject.Inject
+import kotlin.collections.ArrayList
 
 /**
  * Created by yudisetiawan on 3/25/18.
@@ -29,7 +30,7 @@ class HistoryTransactionPresenter @Inject constructor(private val dbManager: DbM
         view?.initFilter(filter = filter)
     }
 
-    fun onLoadHistoryTransaction() {
+    fun onLoadHistoryTransaction(month: String, year: String) {
         val context = view?.getViewContext()
         detailTransactions = ArrayList()
         adapterTransactionDetail = AdapterTransactionDetail(
@@ -37,7 +38,7 @@ class HistoryTransactionPresenter @Inject constructor(private val dbManager: DbM
                 dbManager = dbManager,
                 detailTransactions = detailTransactions
         )
-        dbManager.queryGetAllTransactionBox()
+        dbManager.queryGetAllTransactionByMonthAndYear(month = month, year = year)
                 .subscribe()
                 .on(AndroidScheduler.mainThread())
                 .observer { detailTransactions: MutableList<DetailTransaction>? ->
@@ -48,8 +49,17 @@ class HistoryTransactionPresenter @Inject constructor(private val dbManager: DbM
                 }
     }
 
-    fun onRefreshHistoryTransaction() {
-        // TODO: do something in here (pending)
+    fun onRefreshHistoryTransaction(month: String, year: String) {
+        detailTransactions = ArrayList()
+        dbManager.queryGetAllTransactionByMonthAndYear(month = month, year = year)
+                .subscribe()
+                .on(AndroidScheduler.mainThread())
+                .observer { detailTransactions: MutableList<DetailTransaction>? ->
+                    this.detailTransactions.clear()
+                    this.detailTransactions = detailTransactions as ArrayList<DetailTransaction>
+                    adapterTransactionDetail.refresh(this.detailTransactions)
+                    view?.refreshHistoryTransaction()
+                }
     }
 
 }
