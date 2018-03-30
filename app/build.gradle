@@ -1,8 +1,8 @@
 /*
- * Created by YSN Studio on 3/27/18 9:21 PM
+ * Created by YSN Studio on 3/30/18 7:12 PM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 3/27/18 8:23 AM
+ * Last modified 3/30/18 7:12 PM
  */
 
 apply plugin: 'com.android.application'
@@ -22,7 +22,7 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         javaCompileOptions {
             annotationProcessorOptions {
-                arguments = [ 'objectbox.debug' : 'true']
+                arguments = ['objectbox.debug': 'true']
             }
         }
     }
@@ -116,5 +116,8 @@ dependencies {
      * Fragments, Threads, Services, etc. Less code, better quality
      */
     implementation "org.greenrobot:eventbus:$eventBusVersion"
+
+    /* Customizable NumberPicker */
+    implementation "com.shawnlin:number-picker:$shawnlinNumberPickerVersion"
 
 }
