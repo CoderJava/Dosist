@@ -1,8 +1,8 @@
 /*
- * Created by YSN Studio on 3/22/18 3:33 AM
+ * Created by YSN Studio on 3/30/18 7:10 PM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 3/22/18 3:32 AM
+ * Last modified 3/30/18 7:09 PM
  */
 
 package com.ysn.dosist.views.ui.activities.addtransaction
@@ -10,8 +10,9 @@ package com.ysn.dosist.views.ui.activities.addtransaction
 import android.content.Context
 import android.os.Bundle
 import android.support.v4.content.ContextCompat
+import android.text.Editable
+import android.text.TextWatcher
 import android.view.View
-import com.jakewharton.rxbinding2.widget.RxTextView
 import com.ysn.dosist.R
 import com.ysn.dosist.db.entity.CategoryTransaction
 import com.ysn.dosist.db.entity.DetailTransaction
@@ -19,8 +20,6 @@ import com.ysn.dosist.di.component.activities.addtransaction.DaggerAddTransactio
 import com.ysn.dosist.di.module.activities.addtransaction.AddTransactionActivityModule
 import com.ysn.dosist.views.base.BaseActivity
 import com.ysn.dosist.views.ui.fragments.choosecategory.ChooseCategoryBottomSheetDialogFragment
-import io.reactivex.android.schedulers.AndroidSchedulers
-import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.activity_add_transaction.*
 import org.greenrobot.eventbus.EventBus
 import org.greenrobot.eventbus.Subscribe
@@ -29,7 +28,6 @@ import org.jetbrains.anko.design.snackbar
 import org.jetbrains.anko.info
 import org.jetbrains.anko.toast
 import java.text.DecimalFormat
-import java.util.concurrent.TimeUnit
 import javax.inject.Inject
 
 class AddTransactionActivity : BaseActivity(), AddTransactionView, View.OnClickListener, AnkoLogger {
@@ -65,28 +63,32 @@ class AddTransactionActivity : BaseActivity(), AddTransactionView, View.OnClickL
         text_view_expense_activity_add_transaction.setOnClickListener(this)
         image_view_save_activity_add_transaction.setOnClickListener(this)
         linear_layout_container_category_activity_add_transaction.setOnClickListener(this)
-        RxTextView.textChanges(edit_text_amount_add_transaction_activity)
-                .debounce(500, TimeUnit.MILLISECONDS)
-                .subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(
-                        {
-                            val strAmount = it.toString().replace(",", "")
-                                    .replace(".", "")
-                            if (strAmount.isEmpty()) {
-                                edit_text_amount_add_transaction_activity.setText("0")
-                            } else {
-                                val amount = strAmount.toLong()
-                                val formatAmount = DecimalFormat("#,###").format(amount)
-                                        .replace(",", ".")
-                                edit_text_amount_add_transaction_activity.setText(formatAmount)
-                                edit_text_amount_add_transaction_activity.setSelection(formatAmount.length)
-                            }
-                        },
-                        {
-                            it.printStackTrace()
-                        }
-                )
+        edit_text_amount_add_transaction_activity.addTextChangedListener(object : TextWatcher {
+            override fun afterTextChanged(editable: Editable) {
+                edit_text_amount_add_transaction_activity.removeTextChangedListener(this)
+                val strAmount = editable.toString().replace(",", "")
+                        .replace(".", "")
+                if (strAmount.isEmpty()) {
+                    edit_text_amount_add_transaction_activity.setText("0")
+                } else {
+                    val amount = strAmount.toLong()
+                    val formatAmount = DecimalFormat("#,###").format(amount)
+                            .replace(",", ".")
+                    edit_text_amount_add_transaction_activity.setText(formatAmount)
+                    edit_text_amount_add_transaction_activity.setSelection(formatAmount.length)
+                }
+                edit_text_amount_add_transaction_activity.addTextChangedListener(this)
+            }
+
+            override fun beforeTextChanged(charSequence: CharSequence, p1: Int, p2: Int, p3: Int) {
+                /* nothing to do in here */
+            }
+
+            override fun onTextChanged(charSequence: CharSequence, p1: Int, p2: Int, p3: Int) {
+                /* nothing to do in here */
+            }
+
+        })
     }
 
     override fun onError() {

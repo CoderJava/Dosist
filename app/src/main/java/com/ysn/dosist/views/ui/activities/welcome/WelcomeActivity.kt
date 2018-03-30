@@ -1,23 +1,22 @@
 /*
- * Created by YSN Studio on 3/23/18 10:36 PM
+ * Created by YSN Studio on 3/30/18 7:10 PM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 3/23/18 10:34 PM
+ * Last modified 3/30/18 7:09 PM
  */
 
 package com.ysn.dosist.views.ui.activities.welcome
 
 import android.content.Context
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.view.View
-import com.jakewharton.rxbinding2.widget.RxTextView
 import com.ysn.dosist.R
 import com.ysn.dosist.di.component.activities.welcome.DaggerWelcomeActivityComponent
 import com.ysn.dosist.di.module.activities.welcome.WelcomeActivityModule
 import com.ysn.dosist.views.base.BaseActivity
 import com.ysn.dosist.views.ui.activities.dashboard.DashboardActivity
-import io.reactivex.android.schedulers.AndroidSchedulers
-import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.activity_welcome.*
 import org.jetbrains.anko.clearTask
 import org.jetbrains.anko.design.snackbar
@@ -25,7 +24,6 @@ import org.jetbrains.anko.find
 import org.jetbrains.anko.intentFor
 import org.jetbrains.anko.newTask
 import java.text.DecimalFormat
-import java.util.concurrent.TimeUnit
 import javax.inject.Inject
 
 class WelcomeActivity : BaseActivity(), WelcomeView, View.OnClickListener {
@@ -69,29 +67,31 @@ class WelcomeActivity : BaseActivity(), WelcomeView, View.OnClickListener {
 
     private fun initListeners() {
         text_view_next_activity_welcome.setOnClickListener(this)
-        RxTextView.textChanges(edit_text_amount_activity_welcome)
-                .map { it.toString() }
-                .debounce(500, TimeUnit.MILLISECONDS)
-                .subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(
-                        {
-                            val strAmount = it.replace(",", "")
-                                    .replace(".", "")
-                            if (strAmount.isEmpty()) {
-                                edit_text_amount_activity_welcome.setText("0")
-                            } else {
-                                val amount = strAmount.toLong()
-                                val formatAmount = DecimalFormat("#,###").format(amount)
-                                        .replace(",", ".")
-                                edit_text_amount_activity_welcome.setText(formatAmount)
-                                edit_text_amount_activity_welcome.setSelection(formatAmount.length)
-                            }
-                        },
-                        {
-                            it.printStackTrace()
-                        }
-                )
+        edit_text_amount_activity_welcome.addTextChangedListener(object : TextWatcher {
+            override fun afterTextChanged(editable: Editable) {
+                edit_text_amount_activity_welcome.removeTextChangedListener(this)
+                val strAmount = editable.toString().replace(",", "")
+                        .replace(".", "")
+                if (strAmount.isEmpty()) {
+                    edit_text_amount_activity_welcome.setText("0")
+                } else {
+                    val amount = strAmount.toLong()
+                    val formatAmount = DecimalFormat("#,###").format(amount)
+                            .replace(",", ".")
+                    edit_text_amount_activity_welcome.setText(formatAmount)
+                    edit_text_amount_activity_welcome.setSelection(formatAmount.length)
+                }
+                edit_text_amount_activity_welcome.addTextChangedListener(this)
+            }
+
+            override fun beforeTextChanged(charSequence: CharSequence, p1: Int, p2: Int, p3: Int) {
+                /* nothing to do in here */
+            }
+
+            override fun onTextChanged(charSequence: CharSequence, p1: Int, p2: Int, p3: Int) {
+                /* nothing to do in here */
+            }
+        })
     }
 
     override fun getViewContext(): Context = this
