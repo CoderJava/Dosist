@@ -1,35 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?><!--
-  ~ Created by YSN Studio on 3/29/18 10:39 PM
+  ~ Created by YSN Studio on 3/30/18 6:42 PM
   ~ Copyright (c) 2018. All rights reserved.
   ~
-  ~ Last modified 3/29/18 10:26 PM
+  ~ Last modified 3/30/18 10:58 AM
   -->
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/linear_layout_container_bottom_sheet_dialog_fragment_filter_history_transaction"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/relative_layout_container_bottom_sheet_dialog_fragment_filter_history_transaction"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal"
     android:background="@color/colorPrimary"
+    android:orientation="horizontal"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin">
 
-    <NumberPicker
-        android:id="@+id/number_picker_year_bottom_sheet_dialog_fragment_filter_history_transaction"
-        android:layout_width="0dp"
+    <LinearLayout
+        android:id="@+id/linear_layout_container_number_picker_bottom_sheet_dialog_fragment_filter_history_transaction"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1" />
+        android:orientation="horizontal">
 
-    <View
-        android:layout_width="24dp"
-        android:layout_height="1dp" />
+        <com.shawnlin.numberpicker.NumberPicker
+            android:id="@+id/number_picker_month_bottom_sheet_dialog_fragment_filter_history_transaction"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:np_dividerColor="@color/colorPrimary"
+            app:np_selectedTextColor="@color/colorWhiteLight"
+            app:np_textColor="@color/colorWhiteDarker" />
 
-    <NumberPicker
-        android:id="@+id/number_picker_month_bottom_sheet_dialog_fragment_filter_history_transaction"
-        android:layout_width="0dp"
+        <View
+            android:layout_width="24dp"
+            android:layout_height="1dp" />
+
+        <com.shawnlin.numberpicker.NumberPicker
+            android:id="@+id/number_picker_year_bottom_sheet_dialog_fragment_filter_history_transaction"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:np_dividerColor="@color/colorPrimary"
+            app:np_selectedTextColor="@color/colorWhiteLight"
+            app:np_textColor="@color/colorWhiteDarker" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1" />
+        android:layout_below="@+id/linear_layout_container_number_picker_bottom_sheet_dialog_fragment_filter_history_transaction"
+        android:layout_marginTop="@dimen/activity_vertical_margin">
 
-</LinearLayout>
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/button_cancel_bottom_sheet_dialog_fragment_filter_history_transaction"
+            android:layout_weight="1"
+            android:background="@drawable/background_button_rounded_cancel"
+            android:text="@string/cancel"
+            android:textAllCaps="false"
+            android:textColor="@color/colorAccent" />
+
+        <View
+            android:layout_width="24dp"
+            android:layout_height="1dp" />
+
+        <Button
+            android:id="@+id/button_save_bottom_sheet_dialog_fragment_filter_history_transaction"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/background_button_rounded_save"
+            android:text="@string/save"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhiteLight" />
+
+    </LinearLayout>
+
+</RelativeLayout>
