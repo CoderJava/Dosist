@@ -1,8 +1,8 @@
 /*
- * Created by YSN Studio on 3/25/18 1:59 PM
+ * Created by YSN Studio on 3/30/18 6:39 PM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 3/25/18 1:32 PM
+ * Last modified 3/30/18 11:57 AM
  */
 
 package com.ysn.dosist.views.ui.fragments.home
@@ -14,6 +14,8 @@ import com.ysn.dosist.views.ui.fragments.home.adapter.AdapterTransactionDetail
 import io.objectbox.android.AndroidScheduler
 import io.objectbox.reactive.DataSubscription
 import org.jetbrains.anko.AnkoLogger
+import java.text.SimpleDateFormat
+import java.util.*
 import javax.inject.Inject
 
 /**
@@ -38,7 +40,10 @@ class HomePresenter @Inject constructor(private val dbManager: DbManager) : Base
                 dbManager = dbManager,
                 detailTransactions = detailTransactions
         )
-        transactionDetailSubscription = dbManager.queryGetAllTransactionBox()
+        val now = SimpleDateFormat("MMM yy", Locale.US).format(Date()).split(" ")
+        val monthNow = now[0]
+        val yearNow = now[1]
+        transactionDetailSubscription = dbManager.queryGetAllTransactionByMonthAndYear(month = monthNow, year = yearNow)
                 .subscribe()
                 .on(AndroidScheduler.mainThread())
                 .observer { detailTransactions: MutableList<DetailTransaction>? ->
