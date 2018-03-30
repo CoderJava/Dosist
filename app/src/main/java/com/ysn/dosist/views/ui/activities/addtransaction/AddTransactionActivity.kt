@@ -1,8 +1,8 @@
 /*
- * Created by YSN Studio on 3/30/18 7:10 PM
+ * Created by YSN Studio on 3/30/18 7:35 PM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 3/30/18 7:09 PM
+ * Last modified 3/30/18 7:32 PM
  */
 
 package com.ysn.dosist.views.ui.activities.addtransaction
@@ -136,7 +136,7 @@ class AddTransactionActivity : BaseActivity(), AddTransactionView, View.OnClickL
                 presenter.onSaveTransaction(detailTransaction = detailTransaction)
             }
             else -> {
-                /** nothing to do in here */
+                /* nothing to do in here */
             }
         }
     }
@@ -188,7 +188,7 @@ class AddTransactionActivity : BaseActivity(), AddTransactionView, View.OnClickL
                 text_view_category_activity_add_transaction.tag = chooseCategoryTransaction.id.toString()
             }
             else -> {
-                /** nothing to do in here */
+                /* nothing to do in here */
             }
         }
     }

@@ -1,8 +1,8 @@
 /*
- * Created by YSN Studio on 3/28/18 8:01 AM
+ * Created by YSN Studio on 3/30/18 7:35 PM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 3/28/18 7:55 AM
+ * Last modified 3/30/18 7:33 PM
  */
 
 package com.ysn.dosist.views.ui.activities.dashboard
@@ -84,7 +84,7 @@ class DashboardActivity : BaseActivity(), DashboardView, View.OnClickListener, A
             R.id.floating_action_button_add_transaction_activity_dashboard -> startActivity(intentFor<AddTransactionActivity>())
             R.id.image_view_about_app_activity_dashboard -> startActivity(intentFor<AboutActivity>())
             else -> {
-                /** nothing to do in here */
+                /* nothing to do in here */
             }
         }
     }

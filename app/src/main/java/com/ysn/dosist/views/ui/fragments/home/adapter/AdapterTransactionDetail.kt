@@ -1,8 +1,8 @@
 /*
- * Created by YSN Studio on 3/22/18 2:18 AM
+ * Created by YSN Studio on 3/30/18 7:35 PM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 3/22/18 2:17 AM
+ * Last modified 3/30/18 7:33 PM
  */
 
 package com.ysn.dosist.views.ui.fragments.home.adapter
@@ -56,7 +56,7 @@ class AdapterTransactionDetail(private val context: Context, private val dbManag
                     }
                 }
                 else -> {
-                    /** nothing to do in here */
+                    /* nothing to do in here */
                 }
             }
 
