@@ -1,8 +1,8 @@
 /*
- * Created by YSN Studio on 3/30/18 7:35 PM
+ * Created by YSN Studio on 4/12/18 3:38 AM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 3/30/18 7:33 PM
+ * Last modified 4/12/18 3:37 AM
  */
 
 package com.ysn.dosist.views.ui.activities.dashboard
@@ -43,6 +43,8 @@ class DashboardActivity : BaseActivity(), DashboardView, View.OnClickListener, A
     private fun initListeners() {
         floating_action_button_add_transaction_activity_dashboard.setOnClickListener(this)
         image_view_about_app_activity_dashboard.setOnClickListener(this)
+        image_view_home_inactive_activity_dashboard.setOnClickListener(this)
+        image_view_history_inactive_activity_dashboard.setOnClickListener(this)
         view_pager_activity_dashboard.addOnPageChangeListener(object : ViewPager.OnPageChangeListener {
             override fun onPageScrollStateChanged(state: Int) {
                 /* nothing to do in here */
@@ -82,6 +84,14 @@ class DashboardActivity : BaseActivity(), DashboardView, View.OnClickListener, A
     override fun onClick(view: View) {
         when (view.id) {
             R.id.floating_action_button_add_transaction_activity_dashboard -> startActivity(intentFor<AddTransactionActivity>())
+            R.id.image_view_home_inactive_activity_dashboard -> {
+                tabHomeSelected()
+                view_pager_activity_dashboard.currentItem = 0
+            }
+            R.id.image_view_history_inactive_activity_dashboard -> {
+                tabHistoryTransactionSelected()
+                view_pager_activity_dashboard.currentItem = 1
+            }
             R.id.image_view_about_app_activity_dashboard -> startActivity(intentFor<AboutActivity>())
             else -> {
                 /* nothing to do in here */
