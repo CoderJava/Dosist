@@ -1,8 +1,8 @@
 /*
- * Created by YSN Studio on 3/30/18 6:41 PM
+ * Created by YSN Studio on 4/12/18 3:57 AM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 3/30/18 11:52 AM
+ * Last modified 4/12/18 3:55 AM
  */
 
 package com.ysn.dosist.views.ui.fragments.history
@@ -161,8 +161,16 @@ class HistoryTransactionFragment : BaseFragment(), HistoryTransactionView, View.
         }
     }
 
-    override fun refreshHistoryTransaction() {
-        /* nothing to do in here */
+    override fun refreshHistoryTransaction(adapterTransactionDetail: AdapterTransactionDetail) {
+        if (adapterTransactionDetail.itemCount == 0) {
+            progress_bar_fragment_history_transaction.visibility = View.GONE
+            recycler_view_history_transaction_fragment_history_transaction.visibility = View.INVISIBLE
+            lottie_animation_view_empty_box_fragment_history_transaction.visibility = View.VISIBLE
+        } else {
+            progress_bar_fragment_history_transaction.visibility = View.GONE
+            recycler_view_history_transaction_fragment_history_transaction.visibility = View.VISIBLE
+            lottie_animation_view_empty_box_fragment_history_transaction.visibility = View.GONE
+        }
     }
 
 }

@@ -1,8 +1,8 @@
 /*
- * Created by YSN Studio on 3/30/18 6:41 PM
+ * Created by YSN Studio on 4/12/18 3:57 AM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 3/30/18 11:50 AM
+ * Last modified 4/12/18 3:55 AM
  */
 
 package com.ysn.dosist.views.ui.fragments.history
@@ -58,7 +58,7 @@ class HistoryTransactionPresenter @Inject constructor(private val dbManager: DbM
                     this.detailTransactions.clear()
                     this.detailTransactions = detailTransactions as ArrayList<DetailTransaction>
                     adapterTransactionDetail.refresh(this.detailTransactions)
-                    view?.refreshHistoryTransaction()
+                    view?.refreshHistoryTransaction(adapterTransactionDetail = adapterTransactionDetail)
                 }
     }
 
