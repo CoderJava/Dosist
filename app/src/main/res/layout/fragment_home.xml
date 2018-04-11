@@ -1,8 +1,8 @@
 <!--
-  ~ Created by YSN Studio on 4/12/18 3:51 AM
+  ~ Created by YSN Studio on 4/12/18 4:04 AM
   ~ Copyright (c) 2018. All rights reserved.
   ~
-  ~ Last modified 4/12/18 3:43 AM
+  ~ Last modified 4/12/18 3:59 AM
   -->
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -18,8 +18,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:fontFamily="@font/walkway"
-        android:text="@string/strip"
+        android:fontFamily="sans-serif-condensed"
+        android:textSize="16sp"
+        android:text="@string/month_currently"
         android:textColor="@color/colorWhiteLight" />
 
     <TextView

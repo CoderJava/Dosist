@@ -1,8 +1,8 @@
 <!--
-  ~ Created by YSN Studio on 4/12/18 3:51 AM
+  ~ Created by YSN Studio on 4/12/18 4:04 AM
   ~ Copyright (c) 2018. All rights reserved.
   ~
-  ~ Last modified 4/12/18 3:43 AM
+  ~ Last modified 4/12/18 3:59 AM
   -->
 
 <resources>
@@ -57,4 +57,5 @@
     <string name="_1_0_0">1.0.0</string>
     <string name="cancel">Cancel</string>
     <string name="strip">-</string>
+    <string name="month_currently">Month Currently</string>
 </resources>
