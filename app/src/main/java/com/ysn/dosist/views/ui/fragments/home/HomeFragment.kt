@@ -1,8 +1,8 @@
 /*
- * Created by YSN Studio on 3/25/18 1:59 PM
+ * Created by YSN Studio on 4/12/18 3:51 AM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 3/25/18 1:44 PM
+ * Last modified 4/12/18 3:47 AM
  */
 
 package com.ysn.dosist.views.ui.fragments.home
@@ -26,6 +26,8 @@ import org.greenrobot.eventbus.EventBus
 import org.greenrobot.eventbus.Subscribe
 import org.jetbrains.anko.AnkoLogger
 import java.text.DecimalFormat
+import java.text.SimpleDateFormat
+import java.util.*
 import javax.inject.Inject
 
 
@@ -123,6 +125,8 @@ class HomeFragment : BaseFragment(), HomeView, AnkoLogger {
     }
 
     private fun setupBalanceCurrent(resultBalanceCurrent: BalanceCurrent) {
+        val monthCurrently = SimpleDateFormat("MMMM", Locale.US)
+                .format(Date())
         val decimalFormat = DecimalFormat("#,###")
         val balanceFormat = decimalFormat.format(resultBalanceCurrent.balance)
                 .replace(",", ".")
@@ -130,6 +134,7 @@ class HomeFragment : BaseFragment(), HomeView, AnkoLogger {
                 .replace(",", ".")
         val expenseFormat = decimalFormat.format(resultBalanceCurrent.expense)
                 .replace(",", ".")
+        text_view_month_currently_fragment_home.text = monthCurrently
         text_view_overview_fragment_home.text = balanceFormat
         text_view_income_fragment_home.text = getString(R.string.income_format, incomeFormat)
         text_view_expense_fragment_home.text = getString(R.string.expense_format, expenseFormat)

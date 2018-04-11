@@ -1,8 +1,8 @@
 <!--
-  ~ Created by YSN Studio on 3/30/18 6:34 PM
+  ~ Created by YSN Studio on 4/12/18 3:51 AM
   ~ Copyright (c) 2018. All rights reserved.
   ~
-  ~ Last modified 3/30/18 10:48 AM
+  ~ Last modified 4/12/18 3:43 AM
   -->
 
 <resources>
@@ -56,4 +56,5 @@
     <string name="developed_by_ysn_studio">Developed by YSN Studio</string>
     <string name="_1_0_0">1.0.0</string>
     <string name="cancel">Cancel</string>
+    <string name="strip">-</string>
 </resources>
