@@ -1,0 +1,29 @@
+Kategori transaksi:
+1.  Makan dan Minum (Food Drink)
+    - Jajanan ringan
+    - Kebutuhan pokok
+2.  Belanja (Shopping)
+    - Pakaian
+    - Rumah
+    - Motor
+    - Mobil
+    - Komputer/Laptop
+    - Isi BBM
+    - Dan lain-lainnya
+3.  Gajian (Salary)
+    - Uang masuk
+4.  Gaya Hidup (Lifestyle)
+    - Nonton bioskop
+    - Nonton konser
+    - Nonton bareng
+    - Seminar
+    - Workshop
+    - Pelatihan
+    - Dan lain-lainnya
+5.  Kesehatan (Health)
+    - Obat-obatan
+    - Rumah Sakit
+6.  Jalan-jalan (Travelling)
+    - Pergi bareng bersama komunitas
+    - Pergi ke luar kota
+7.  Lainnya 
