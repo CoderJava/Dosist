@@ -1,8 +1,8 @@
 /*
- * Created by YSN Studio on 4/12/18 4:13 AM
+ * Created by YSN Studio on 6/2/18 12:37 AM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 4/12/18 4:04 AM
+ * Last modified 6/2/18 12:35 AM
  */
 
 apply plugin: 'com.android.application'
@@ -89,7 +89,7 @@ dependencies {
     /* Dependency injection */
     implementation "com.google.dagger:dagger:$daggerVersion"
     kapt "com.google.dagger:dagger-compiler:$daggerVersion"
-    provided "org.glassfish:javax.annotation:$annotationVersion"
+    compileOnly "org.glassfish:javax.annotation:$annotationVersion"
 
     /* Memory leak detection */
     debugImplementation "com.squareup.leakcanary:leakcanary-android:$leakCanaryVersion"
