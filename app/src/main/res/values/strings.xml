@@ -1,8 +1,8 @@
 <!--
-  ~ Created by YSN Studio on 4/12/18 4:04 AM
+  ~ Created by YSN Studio on 6/2/18 12:54 AM
   ~ Copyright (c) 2018. All rights reserved.
   ~
-  ~ Last modified 4/12/18 3:59 AM
+  ~ Last modified 6/2/18 12:43 AM
   -->
 
 <resources>
@@ -53,7 +53,7 @@
     <string name="about">About</string>
     <string name="image_view_about_app">image view about app</string>
     <string name="ds">Ds</string>
-    <string name="developed_by_ysn_studio">Developed by YSN Studio</string>
+    <string name="developed_by_ysn_studio">Developed by\nYSN Studio</string>
     <string name="_1_0_0">1.0.0</string>
     <string name="cancel">Cancel</string>
     <string name="strip">-</string>
