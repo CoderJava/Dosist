@@ -1,8 +1,8 @@
 /*
- * Created by YSN Studio on 6/2/18 12:37 AM
+ * Created by YSN Studio on 6/2/18 12:54 AM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 6/2/18 12:35 AM
+ * Last modified 6/2/18 12:47 AM
  */
 
 apply plugin: 'com.android.application'
@@ -17,8 +17,8 @@ android {
         applicationId "com.ysn.dosist"
         minSdkVersion 19
         targetSdkVersion 27
-        versionCode 3
-        versionName "1.2.0"
+        versionCode 4
+        versionName "1.2.1"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         javaCompileOptions {
             annotationProcessorOptions {
